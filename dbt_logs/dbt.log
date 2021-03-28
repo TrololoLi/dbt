@@ -18512,3 +18512,1742 @@ with relation as (
 2021-03-28 02:01:09.726873 (MainThread): Press Ctrl+C to exit.
 
 
+2021-03-28 02:18:04.340007 (MainThread): Flushing usage events
+2021-03-28 02:18:04.340999 (MainThread): ctrl-c
+2021-03-28 02:18:13.859344 (MainThread): Running with dbt=0.19.0
+2021-03-28 02:18:13.912554 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/home/user/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-03-28 02:18:13.913106 (MainThread): Tracking: do not track
+2021-03-28 02:18:13.943973 (MainThread): Partial parsing not enabled
+2021-03-28 02:18:13.944684 (MainThread): Parsing macros/catalog.sql
+2021-03-28 02:18:13.947761 (MainThread): Parsing macros/relations.sql
+2021-03-28 02:18:13.949226 (MainThread): Parsing macros/adapters.sql
+2021-03-28 02:18:13.967052 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-03-28 02:18:13.969344 (MainThread): Parsing macros/core.sql
+2021-03-28 02:18:13.972614 (MainThread): Parsing macros/adapters/common.sql
+2021-03-28 02:18:14.011684 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-03-28 02:18:14.013078 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-03-28 02:18:14.014374 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-03-28 02:18:14.017083 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-03-28 02:18:14.019098 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-03-28 02:18:14.020459 (MainThread): Parsing macros/etc/query.sql
+2021-03-28 02:18:14.021287 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-03-28 02:18:14.022967 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-03-28 02:18:14.023714 (MainThread): Parsing macros/etc/datetime.sql
+2021-03-28 02:18:14.031725 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-03-28 02:18:14.033039 (MainThread): Parsing macros/materializations/helpers.sql
+2021-03-28 02:18:14.040974 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-03-28 02:18:14.054009 (MainThread): Parsing macros/materializations/table/table.sql
+2021-03-28 02:18:14.060211 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-03-28 02:18:14.088349 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-03-28 02:18:14.091028 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-03-28 02:18:14.113767 (MainThread): Parsing macros/materializations/view/view.sql
+2021-03-28 02:18:14.121651 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-03-28 02:18:14.126805 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-03-28 02:18:14.150495 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-03-28 02:18:14.153233 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-03-28 02:18:14.165172 (MainThread): Partial parsing not enabled
+2021-03-28 02:18:14.199721 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:18:14.217488 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:18:14.222887 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:18:14.227008 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:18:14.232124 (MainThread): Acquiring new postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:18:14.236773 (MainThread): Acquiring new postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:18:14.242385 (MainThread): Acquiring new postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:18:14.246541 (MainThread): Acquiring new postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:18:14.356518 (MainThread): Found 8 models, 6 tests, 0 snapshots, 0 analyses, 138 macros, 0 operations, 0 seed files, 1 source, 0 exposures
+2021-03-28 02:18:14.357623 (MainThread): 
+2021-03-28 02:18:14.357889 (MainThread): Acquiring new postgres connection "master".
+2021-03-28 02:18:14.358892 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_postgres".
+2021-03-28 02:18:14.368014 (ThreadPoolExecutor-0_0): Using postgres connection "list_postgres".
+2021-03-28 02:18:14.368395 (ThreadPoolExecutor-0_1): Acquiring new postgres connection "list_postgres".
+2021-03-28 02:18:14.368568 (ThreadPoolExecutor-0_0): On list_postgres: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-03-28 02:18:14.370315 (ThreadPoolExecutor-0_1): Using postgres connection "list_postgres".
+2021-03-28 02:18:14.370526 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-03-28 02:18:14.370682 (ThreadPoolExecutor-0_1): On list_postgres: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-03-28 02:18:14.371049 (ThreadPoolExecutor-0_1): Opening a new connection, currently in state init
+2021-03-28 02:18:14.375092 (ThreadPoolExecutor-0_0): SQL status: SELECT 7 in 0.00 seconds
+2021-03-28 02:18:14.375638 (ThreadPoolExecutor-0_1): SQL status: SELECT 7 in 0.00 seconds
+2021-03-28 02:18:14.377322 (ThreadPoolExecutor-0_0): On list_postgres: Close
+2021-03-28 02:18:14.377542 (ThreadPoolExecutor-0_1): On list_postgres: Close
+2021-03-28 02:18:14.379694 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_postgres_dbt_dbt".
+2021-03-28 02:18:14.380143 (ThreadPoolExecutor-1_1): Acquiring new postgres connection "list_postgres_dbt".
+2021-03-28 02:18:14.385500 (ThreadPoolExecutor-1_0): Using postgres connection "list_postgres_dbt_dbt".
+2021-03-28 02:18:14.386794 (ThreadPoolExecutor-1_1): Using postgres connection "list_postgres_dbt".
+2021-03-28 02:18:14.386966 (ThreadPoolExecutor-1_0): On list_postgres_dbt_dbt: BEGIN
+2021-03-28 02:18:14.387077 (ThreadPoolExecutor-1_1): On list_postgres_dbt: BEGIN
+2021-03-28 02:18:14.387204 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-03-28 02:18:14.387304 (ThreadPoolExecutor-1_1): Opening a new connection, currently in state closed
+2021-03-28 02:18:14.390575 (ThreadPoolExecutor-1_1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.390718 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.390858 (ThreadPoolExecutor-1_1): Using postgres connection "list_postgres_dbt".
+2021-03-28 02:18:14.390957 (ThreadPoolExecutor-1_0): Using postgres connection "list_postgres_dbt_dbt".
+2021-03-28 02:18:14.391100 (ThreadPoolExecutor-1_1): On list_postgres_dbt: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "list_postgres_dbt"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt'
+  
+2021-03-28 02:18:14.391194 (ThreadPoolExecutor-1_0): On list_postgres_dbt_dbt: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "list_postgres_dbt_dbt"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dbt'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dbt'
+  
+2021-03-28 02:18:14.393463 (ThreadPoolExecutor-1_0): SQL status: SELECT 4 in 0.00 seconds
+2021-03-28 02:18:14.393589 (ThreadPoolExecutor-1_1): SQL status: SELECT 11 in 0.00 seconds
+2021-03-28 02:18:14.394128 (ThreadPoolExecutor-1_0): On list_postgres_dbt_dbt: ROLLBACK
+2021-03-28 02:18:14.394785 (ThreadPoolExecutor-1_1): On list_postgres_dbt: ROLLBACK
+2021-03-28 02:18:14.395087 (ThreadPoolExecutor-1_0): On list_postgres_dbt_dbt: Close
+2021-03-28 02:18:14.395180 (ThreadPoolExecutor-1_1): On list_postgres_dbt: Close
+2021-03-28 02:18:14.400070 (MainThread): Using postgres connection "master".
+2021-03-28 02:18:14.400185 (MainThread): On master: BEGIN
+2021-03-28 02:18:14.400259 (MainThread): Opening a new connection, currently in state init
+2021-03-28 02:18:14.403554 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.403693 (MainThread): Using postgres connection "master".
+2021-03-28 02:18:14.403765 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-03-28 02:18:14.437812 (MainThread): SQL status: SELECT 4 in 0.03 seconds
+2021-03-28 02:18:14.438452 (MainThread): On master: ROLLBACK
+2021-03-28 02:18:14.438904 (MainThread): Using postgres connection "master".
+2021-03-28 02:18:14.438997 (MainThread): On master: BEGIN
+2021-03-28 02:18:14.439917 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.440043 (MainThread): On master: COMMIT
+2021-03-28 02:18:14.440154 (MainThread): Using postgres connection "master".
+2021-03-28 02:18:14.440210 (MainThread): On master: COMMIT
+2021-03-28 02:18:14.440602 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-03-28 02:18:14.440720 (MainThread): On master: Close
+2021-03-28 02:18:14.441151 (MainThread): 05:18:14 | Concurrency: 2 threads (target='dev')
+2021-03-28 02:18:14.441334 (MainThread): 05:18:14 | 
+2021-03-28 02:18:14.443858 (Thread-1): Began running node model.oyster_cards.oyster_data
+2021-03-28 02:18:14.444067 (Thread-1): 05:18:14 | 1 of 8 START table model dbt_dbt.oyster_data......................... [RUN]
+2021-03-28 02:18:14.444311 (Thread-1): Acquiring new postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:18:14.444417 (Thread-1): Compiling model.oyster_cards.oyster_data
+2021-03-28 02:18:14.446669 (Thread-1): Writing injected SQL for node "model.oyster_cards.oyster_data"
+2021-03-28 02:18:14.447048 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.462527 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:18:14.462664 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+drop table if exists "postgres"."dbt_dbt"."oyster_data__dbt_tmp" cascade
+2021-03-28 02:18:14.462746 (Thread-1): Opening a new connection, currently in state closed
+2021-03-28 02:18:14.466177 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:18:14.469616 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:18:14.469695 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+drop table if exists "postgres"."dbt_dbt"."oyster_data__dbt_backup" cascade
+2021-03-28 02:18:14.470055 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:18:14.479434 (Thread-1): Writing runtime SQL for node "model.oyster_cards.oyster_data"
+2021-03-28 02:18:14.479677 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:18:14.479743 (Thread-1): On model.oyster_cards.oyster_data: BEGIN
+2021-03-28 02:18:14.480238 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.480402 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:18:14.480517 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+
+
+  create  table "postgres"."dbt_dbt"."oyster_data__dbt_tmp"
+  as (
+    
+
+with source as (
+
+    select * from "postgres"."raw"."Nov09JnyExport"
+
+),
+renamed as (
+
+    select
+        downo as DOWno,
+        daytype as DOW,
+        subsystem,
+        startstn as StartStn,
+        EndStation as EndStn,
+        enttime,
+        enttimehhmm as EnTimeHHMM,
+        extime,
+        extimehhmm as ExTimeHHMM,
+        ZVPPT as Zones,
+        JNYTYP as JourneyType,
+        dailycapping,
+        FFare as FullFare,
+        DFare as DiscountFare,
+        RouteID as BusRoute,
+        finalproduct
+
+    from source
+
+)
+
+select * from renamed
+  );
+2021-03-28 02:18:14.535776 (Thread-1): SQL status: SELECT 49378 in 0.06 seconds
+2021-03-28 02:18:14.543285 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:18:14.543375 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+alter table "postgres"."dbt_dbt"."oyster_data" rename to "oyster_data__dbt_backup"
+2021-03-28 02:18:14.543827 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:18:14.546582 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:18:14.546700 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+alter table "postgres"."dbt_dbt"."oyster_data__dbt_tmp" rename to "oyster_data"
+2021-03-28 02:18:14.547216 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:18:14.554126 (Thread-1): On model.oyster_cards.oyster_data: COMMIT
+2021-03-28 02:18:14.554223 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:18:14.554281 (Thread-1): On model.oyster_cards.oyster_data: COMMIT
+2021-03-28 02:18:14.579800 (Thread-1): SQL status: COMMIT in 0.03 seconds
+2021-03-28 02:18:14.589705 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:18:14.590014 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+drop table if exists "postgres"."dbt_dbt"."oyster_data__dbt_backup" cascade
+2021-03-28 02:18:14.600162 (Thread-1): SQL status: DROP TABLE in 0.01 seconds
+2021-03-28 02:18:14.608687 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.609076 (Thread-1): On model.oyster_cards.oyster_data: Close
+2021-03-28 02:18:14.610392 (Thread-1): 05:18:14 | 1 of 8 OK created table model dbt_dbt.oyster_data.................... [SELECT 49378 in 0.17s]
+2021-03-28 02:18:14.610797 (Thread-1): Finished running node model.oyster_cards.oyster_data
+2021-03-28 02:18:14.613535 (Thread-2): Began running node model.oyster_cards.londond_undeground_data
+2021-03-28 02:18:14.614805 (Thread-2): 05:18:14 | 2 of 8 START table model dbt_dbt.londond_undeground_data............. [RUN]
+2021-03-28 02:18:14.615821 (Thread-2): Acquiring new postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:18:14.616151 (Thread-2): Compiling model.oyster_cards.londond_undeground_data
+2021-03-28 02:18:14.621653 (Thread-1): Began running node model.oyster_cards.dim_pass_on_subsystem
+2021-03-28 02:18:14.624618 (Thread-2): Writing injected SQL for node "model.oyster_cards.londond_undeground_data"
+2021-03-28 02:18:14.625298 (Thread-1): 05:18:14 | 3 of 8 START view model dbt.dim_pass_on_subsystem.................... [RUN]
+2021-03-28 02:18:14.626551 (Thread-1): Acquiring new postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:18:14.626928 (Thread-1): Compiling model.oyster_cards.dim_pass_on_subsystem
+2021-03-28 02:18:14.635917 (Thread-1): Writing injected SQL for node "model.oyster_cards.dim_pass_on_subsystem"
+2021-03-28 02:18:14.636623 (Thread-2): finished collecting timing info
+2021-03-28 02:18:14.644091 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:18:14.644527 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.644964 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+drop table if exists "postgres"."dbt_dbt"."londond_undeground_data__dbt_tmp" cascade
+2021-03-28 02:18:14.660806 (Thread-2): Opening a new connection, currently in state closed
+2021-03-28 02:18:14.676302 (Thread-1): Using postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:18:14.676436 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_pass_on_subsystem"} */
+drop view if exists "postgres"."dbt"."dim_pass_on_subsystem__dbt_tmp" cascade
+2021-03-28 02:18:14.676520 (Thread-1): Opening a new connection, currently in state closed
+2021-03-28 02:18:14.677288 (Thread-2): SQL status: DROP TABLE in 0.02 seconds
+2021-03-28 02:18:14.681381 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:18:14.681493 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+drop table if exists "postgres"."dbt_dbt"."londond_undeground_data__dbt_backup" cascade
+2021-03-28 02:18:14.682019 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:18:14.684631 (Thread-2): Writing runtime SQL for node "model.oyster_cards.londond_undeground_data"
+2021-03-28 02:18:14.684824 (Thread-1): SQL status: DROP VIEW in 0.01 seconds
+2021-03-28 02:18:14.688054 (Thread-1): Using postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:18:14.688161 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_pass_on_subsystem"} */
+drop view if exists "postgres"."dbt"."dim_pass_on_subsystem__dbt_backup" cascade
+2021-03-28 02:18:14.688523 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:18:14.688697 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:18:14.688820 (Thread-2): On model.oyster_cards.londond_undeground_data: BEGIN
+2021-03-28 02:18:14.695692 (Thread-1): Writing runtime SQL for node "model.oyster_cards.dim_pass_on_subsystem"
+2021-03-28 02:18:14.695899 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.696002 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:18:14.696090 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+
+
+  create  table "postgres"."dbt_dbt"."londond_undeground_data__dbt_tmp"
+  as (
+    
+
+select *
+from "postgres"."dbt_dbt"."oyster_data"
+where subsystem LIKE '%LUL%'
+
+-- ALTER TABLE vendors ADD COLUMN ID SERIAL PRIMARY KEY;
+  );
+2021-03-28 02:18:14.696280 (Thread-1): Using postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:18:14.696371 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: BEGIN
+2021-03-28 02:18:14.696704 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.696797 (Thread-1): Using postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:18:14.696852 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_pass_on_subsystem"} */
+
+  create view "postgres"."dbt"."dim_pass_on_subsystem__dbt_tmp" as (
+    select subsystem,pass_type,count(1)
+from "postgres"."dbt_dbt"."oyster_data"
+group by subsystem,pass_type
+order by subsystem,pass_type
+  );
+
+2021-03-28 02:18:14.697214 (Thread-1): Postgres error: column "pass_type" does not exist
+LINE 4:     select subsystem,pass_type,count(1)
+                             ^
+
+2021-03-28 02:18:14.697305 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: ROLLBACK
+2021-03-28 02:18:14.697644 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.697854 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: Close
+2021-03-28 02:18:14.698294 (Thread-1): Database Error in model dim_pass_on_subsystem (models/marts/dim_pass_on_subsystem.sql)
+  column "pass_type" does not exist
+  LINE 4:     select subsystem,pass_type,count(1)
+                               ^
+  compiled SQL at target/run/oyster_cards/models/marts/dim_pass_on_subsystem.sql
+Traceback (most recent call last):
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 47, in exception_handler
+    yield
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+psycopg2.errors.UndefinedColumn: column "pass_type" does not exist
+LINE 4:     select subsystem,pass_type,count(1)
+                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/task/base.py", line 344, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/task/base.py", line 287, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/task/base.py", line 389, in run
+    return self.execute(compiled_node, manifest)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/task/run.py", line 248, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 61, in macro
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/clients/jinja.py", line 332, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/clients/jinja.py", line 259, in call_macro
+    return macro(*args, **kwargs)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 227, in execute
+    return self.connections.execute(
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/home/user/anaconda3/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 58, in exception_handler
+    raise dbt.exceptions.DatabaseException(str(e).strip()) from e
+dbt.exceptions.DatabaseException: Database Error in model dim_pass_on_subsystem (models/marts/dim_pass_on_subsystem.sql)
+  column "pass_type" does not exist
+  LINE 4:     select subsystem,pass_type,count(1)
+                               ^
+  compiled SQL at target/run/oyster_cards/models/marts/dim_pass_on_subsystem.sql
+2021-03-28 02:18:14.700266 (Thread-1): 05:18:14 | 3 of 8 ERROR creating view model dbt.dim_pass_on_subsystem........... [ERROR in 0.07s]
+2021-03-28 02:18:14.700517 (Thread-1): Finished running node model.oyster_cards.dim_pass_on_subsystem
+2021-03-28 02:18:14.700645 (Thread-1): Began running node model.oyster_cards.stg_croydon_tram_data
+2021-03-28 02:18:14.700843 (Thread-1): 05:18:14 | 4 of 8 START table model dbt.stg_croydon_tram_data................... [RUN]
+2021-03-28 02:18:14.701162 (Thread-1): Acquiring new postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:18:14.701286 (Thread-1): Compiling model.oyster_cards.stg_croydon_tram_data
+2021-03-28 02:18:14.703364 (Thread-1): Writing injected SQL for node "model.oyster_cards.stg_croydon_tram_data"
+2021-03-28 02:18:14.703840 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.706871 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:18:14.706957 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+drop table if exists "postgres"."dbt"."stg_croydon_tram_data__dbt_tmp" cascade
+2021-03-28 02:18:14.707022 (Thread-1): Opening a new connection, currently in state closed
+2021-03-28 02:18:14.710404 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:18:14.717952 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:18:14.718147 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+drop table if exists "postgres"."dbt"."stg_croydon_tram_data__dbt_backup" cascade
+2021-03-28 02:18:14.718576 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:18:14.754671 (Thread-2): SQL status: SELECT 16064 in 0.06 seconds
+2021-03-28 02:18:14.754893 (Thread-1): Writing runtime SQL for node "model.oyster_cards.stg_croydon_tram_data"
+2021-03-28 02:18:14.757840 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:18:14.758202 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+alter table "postgres"."dbt_dbt"."londond_undeground_data" rename to "londond_undeground_data__dbt_backup"
+2021-03-28 02:18:14.758324 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:18:14.758504 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: BEGIN
+2021-03-28 02:18:14.758874 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.759012 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:18:14.759125 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+
+
+  create  table "postgres"."dbt"."stg_croydon_tram_data__dbt_tmp"
+  as (
+    select *
+from "postgres"."dbt_dbt"."oyster_data"
+where subsystem LIKE '%TRAM%'
+  );
+2021-03-28 02:18:14.759278 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:18:14.762472 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:18:14.762554 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+alter table "postgres"."dbt_dbt"."londond_undeground_data__dbt_tmp" rename to "londond_undeground_data"
+2021-03-28 02:18:14.763006 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:18:14.765721 (Thread-2): On model.oyster_cards.londond_undeground_data: COMMIT
+2021-03-28 02:18:14.765801 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:18:14.765857 (Thread-2): On model.oyster_cards.londond_undeground_data: COMMIT
+2021-03-28 02:18:14.771286 (Thread-1): SQL status: SELECT 311 in 0.01 seconds
+2021-03-28 02:18:14.774599 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:18:14.774757 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+alter table "postgres"."dbt"."stg_croydon_tram_data" rename to "stg_croydon_tram_data__dbt_backup"
+2021-03-28 02:18:14.775236 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:18:14.777979 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:18:14.778052 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+alter table "postgres"."dbt"."stg_croydon_tram_data__dbt_tmp" rename to "stg_croydon_tram_data"
+2021-03-28 02:18:14.778437 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:18:14.780651 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: COMMIT
+2021-03-28 02:18:14.780774 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:18:14.780880 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: COMMIT
+2021-03-28 02:18:14.781036 (Thread-2): SQL status: COMMIT in 0.02 seconds
+2021-03-28 02:18:14.782202 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:18:14.782295 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+drop table if exists "postgres"."dbt_dbt"."londond_undeground_data__dbt_backup" cascade
+2021-03-28 02:18:14.783348 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2021-03-28 02:18:14.784688 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:18:14.784758 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+drop table if exists "postgres"."dbt"."stg_croydon_tram_data__dbt_backup" cascade
+2021-03-28 02:18:14.786926 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:18:14.789248 (Thread-2): finished collecting timing info
+2021-03-28 02:18:14.789356 (Thread-2): On model.oyster_cards.londond_undeground_data: Close
+2021-03-28 02:18:14.789525 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:18:14.790005 (Thread-2): 05:18:14 | 2 of 8 OK created table model dbt_dbt.londond_undeground_data........ [SELECT 16064 in 0.17s]
+2021-03-28 02:18:14.792848 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.793036 (Thread-2): Finished running node model.oyster_cards.londond_undeground_data
+2021-03-28 02:18:14.793196 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: Close
+2021-03-28 02:18:14.793417 (Thread-2): Began running node model.oyster_cards.stg_london_bus_data
+2021-03-28 02:18:14.794211 (Thread-1): 05:18:14 | 4 of 8 OK created table model dbt.stg_croydon_tram_data.............. [SELECT 311 in 0.09s]
+2021-03-28 02:18:14.794446 (Thread-2): 05:18:14 | 5 of 8 START table model dbt.stg_london_bus_data..................... [RUN]
+2021-03-28 02:18:14.794641 (Thread-1): Finished running node model.oyster_cards.stg_croydon_tram_data
+2021-03-28 02:18:14.795110 (Thread-2): Acquiring new postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:18:14.795357 (Thread-1): Began running node model.oyster_cards.dim_avg_travel_time
+2021-03-28 02:18:14.795567 (Thread-2): Compiling model.oyster_cards.stg_london_bus_data
+2021-03-28 02:18:14.795967 (Thread-1): 05:18:14 | 6 of 8 START view model dbt.dim_avg_travel_time...................... [RUN]
+2021-03-28 02:18:14.798115 (Thread-2): Writing injected SQL for node "model.oyster_cards.stg_london_bus_data"
+2021-03-28 02:18:14.798416 (Thread-1): Acquiring new postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:18:14.798591 (Thread-1): Compiling model.oyster_cards.dim_avg_travel_time
+2021-03-28 02:18:14.800228 (Thread-1): Writing injected SQL for node "model.oyster_cards.dim_avg_travel_time"
+2021-03-28 02:18:14.800331 (Thread-2): finished collecting timing info
+2021-03-28 02:18:14.802393 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:18:14.802484 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+drop table if exists "postgres"."dbt"."stg_london_bus_data__dbt_tmp" cascade
+2021-03-28 02:18:14.802582 (Thread-2): Opening a new connection, currently in state closed
+2021-03-28 02:18:14.802798 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.804831 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:18:14.804919 (Thread-1): On model.oyster_cards.dim_avg_travel_time: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_avg_travel_time"} */
+drop view if exists "postgres"."dbt"."dim_avg_travel_time__dbt_tmp" cascade
+2021-03-28 02:18:14.804985 (Thread-1): Opening a new connection, currently in state closed
+2021-03-28 02:18:14.805823 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:18:14.809272 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:18:14.809553 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+drop table if exists "postgres"."dbt"."stg_london_bus_data__dbt_backup" cascade
+2021-03-28 02:18:14.809992 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:18:14.814544 (Thread-2): Writing runtime SQL for node "model.oyster_cards.stg_london_bus_data"
+2021-03-28 02:18:14.814829 (Thread-1): SQL status: DROP VIEW in 0.01 seconds
+2021-03-28 02:18:14.818549 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:18:14.818764 (Thread-1): On model.oyster_cards.dim_avg_travel_time: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_avg_travel_time"} */
+drop view if exists "postgres"."dbt"."dim_avg_travel_time__dbt_backup" cascade
+2021-03-28 02:18:14.818927 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:18:14.819161 (Thread-2): On model.oyster_cards.stg_london_bus_data: BEGIN
+2021-03-28 02:18:14.819455 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:18:14.822277 (Thread-1): Writing runtime SQL for node "model.oyster_cards.dim_avg_travel_time"
+2021-03-28 02:18:14.822459 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.822574 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:18:14.822668 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+
+
+  create  table "postgres"."dbt"."stg_london_bus_data__dbt_tmp"
+  as (
+    select *
+from "postgres"."dbt_dbt"."oyster_data"
+where subsystem = 'LTB'
+  );
+2021-03-28 02:18:14.822860 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:18:14.822948 (Thread-1): On model.oyster_cards.dim_avg_travel_time: BEGIN
+2021-03-28 02:18:14.823305 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.823404 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:18:14.823475 (Thread-1): On model.oyster_cards.dim_avg_travel_time: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_avg_travel_time"} */
+
+  create view "postgres"."dbt"."dim_avg_travel_time__dbt_tmp" as (
+    select round(avg(extime-enttime),2) as travel_time_minutes
+from "postgres"."dbt_dbt"."londond_undeground_data"
+  );
+
+2021-03-28 02:18:14.824975 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2021-03-28 02:18:14.828512 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:18:14.828608 (Thread-1): On model.oyster_cards.dim_avg_travel_time: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_avg_travel_time"} */
+alter table "postgres"."dbt"."dim_avg_travel_time__dbt_tmp" rename to "dim_avg_travel_time"
+2021-03-28 02:18:14.829097 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:18:14.832438 (Thread-1): On model.oyster_cards.dim_avg_travel_time: COMMIT
+2021-03-28 02:18:14.832547 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:18:14.832619 (Thread-1): On model.oyster_cards.dim_avg_travel_time: COMMIT
+2021-03-28 02:18:14.837003 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2021-03-28 02:18:14.838184 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:18:14.838272 (Thread-1): On model.oyster_cards.dim_avg_travel_time: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_avg_travel_time"} */
+drop view if exists "postgres"."dbt"."dim_avg_travel_time__dbt_backup" cascade
+2021-03-28 02:18:14.838623 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:18:14.841265 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.841391 (Thread-1): On model.oyster_cards.dim_avg_travel_time: Close
+2021-03-28 02:18:14.841954 (Thread-1): 05:18:14 | 6 of 8 OK created view model dbt.dim_avg_travel_time................. [CREATE VIEW in 0.04s]
+2021-03-28 02:18:14.842142 (Thread-1): Finished running node model.oyster_cards.dim_avg_travel_time
+2021-03-28 02:18:14.842338 (Thread-1): Began running node model.oyster_cards.dim_entrance_per_day
+2021-03-28 02:18:14.842733 (Thread-1): 05:18:14 | 7 of 8 START view model dbt.dim_entrance_per_day..................... [RUN]
+2021-03-28 02:18:14.843105 (Thread-1): Acquiring new postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:18:14.843250 (Thread-1): Compiling model.oyster_cards.dim_entrance_per_day
+2021-03-28 02:18:14.846676 (Thread-1): Writing injected SQL for node "model.oyster_cards.dim_entrance_per_day"
+2021-03-28 02:18:14.846939 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.849318 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:18:14.849443 (Thread-1): On model.oyster_cards.dim_entrance_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_entrance_per_day"} */
+drop view if exists "postgres"."dbt"."dim_entrance_per_day__dbt_tmp" cascade
+2021-03-28 02:18:14.849521 (Thread-1): Opening a new connection, currently in state closed
+2021-03-28 02:18:14.853236 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:18:14.859655 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:18:14.859814 (Thread-1): On model.oyster_cards.dim_entrance_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_entrance_per_day"} */
+drop view if exists "postgres"."dbt"."dim_entrance_per_day__dbt_backup" cascade
+2021-03-28 02:18:14.860371 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:18:14.863514 (Thread-1): Writing runtime SQL for node "model.oyster_cards.dim_entrance_per_day"
+2021-03-28 02:18:14.863687 (Thread-2): SQL status: SELECT 31823 in 0.04 seconds
+2021-03-28 02:18:14.866727 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:18:14.866823 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+alter table "postgres"."dbt"."stg_london_bus_data" rename to "stg_london_bus_data__dbt_backup"
+2021-03-28 02:18:14.867071 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:18:14.867171 (Thread-1): On model.oyster_cards.dim_entrance_per_day: BEGIN
+2021-03-28 02:18:14.867481 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:18:14.870516 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:18:14.870593 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+alter table "postgres"."dbt"."stg_london_bus_data__dbt_tmp" rename to "stg_london_bus_data"
+2021-03-28 02:18:14.870816 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.870921 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:18:14.871000 (Thread-1): On model.oyster_cards.dim_entrance_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_entrance_per_day"} */
+
+  create view "postgres"."dbt"."dim_entrance_per_day__dbt_tmp" as (
+    select DOW, StartStn, count(1)
+from "postgres"."dbt_dbt"."londond_undeground_data"
+group by DOW, StartStn
+order by StartStn,count desc
+  );
+
+2021-03-28 02:18:14.871113 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:18:14.873482 (Thread-2): On model.oyster_cards.stg_london_bus_data: COMMIT
+2021-03-28 02:18:14.873556 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2021-03-28 02:18:14.873676 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:18:14.876706 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:18:14.876833 (Thread-2): On model.oyster_cards.stg_london_bus_data: COMMIT
+2021-03-28 02:18:14.876928 (Thread-1): On model.oyster_cards.dim_entrance_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_entrance_per_day"} */
+alter table "postgres"."dbt"."dim_entrance_per_day__dbt_tmp" rename to "dim_entrance_per_day"
+2021-03-28 02:18:14.877485 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:18:14.879707 (Thread-1): On model.oyster_cards.dim_entrance_per_day: COMMIT
+2021-03-28 02:18:14.879786 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:18:14.879841 (Thread-1): On model.oyster_cards.dim_entrance_per_day: COMMIT
+2021-03-28 02:18:14.903013 (Thread-2): SQL status: COMMIT in 0.03 seconds
+2021-03-28 02:18:14.904343 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:18:14.904422 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+drop table if exists "postgres"."dbt"."stg_london_bus_data__dbt_backup" cascade
+2021-03-28 02:18:14.904865 (Thread-1): SQL status: COMMIT in 0.02 seconds
+2021-03-28 02:18:14.906223 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:18:14.906323 (Thread-1): On model.oyster_cards.dim_entrance_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_entrance_per_day"} */
+drop view if exists "postgres"."dbt"."dim_entrance_per_day__dbt_backup" cascade
+2021-03-28 02:18:14.906673 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:18:14.909658 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.909802 (Thread-1): On model.oyster_cards.dim_entrance_per_day: Close
+2021-03-28 02:18:14.909939 (Thread-2): SQL status: DROP TABLE in 0.01 seconds
+2021-03-28 02:18:14.910695 (Thread-1): 05:18:14 | 7 of 8 OK created view model dbt.dim_entrance_per_day................ [CREATE VIEW in 0.07s]
+2021-03-28 02:18:14.914104 (Thread-2): finished collecting timing info
+2021-03-28 02:18:14.914381 (Thread-1): Finished running node model.oyster_cards.dim_entrance_per_day
+2021-03-28 02:18:14.914631 (Thread-2): On model.oyster_cards.stg_london_bus_data: Close
+2021-03-28 02:18:14.914828 (Thread-1): Began running node model.oyster_cards.dim_exit_per_day
+2021-03-28 02:18:14.915216 (Thread-1): 05:18:14 | 8 of 8 START view model dbt.dim_exit_per_day......................... [RUN]
+2021-03-28 02:18:14.915786 (Thread-2): 05:18:14 | 5 of 8 OK created table model dbt.stg_london_bus_data................ [SELECT 31823 in 0.12s]
+2021-03-28 02:18:14.916143 (Thread-1): Acquiring new postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:18:14.916503 (Thread-2): Finished running node model.oyster_cards.stg_london_bus_data
+2021-03-28 02:18:14.916669 (Thread-1): Compiling model.oyster_cards.dim_exit_per_day
+2021-03-28 02:18:14.920312 (Thread-1): Writing injected SQL for node "model.oyster_cards.dim_exit_per_day"
+2021-03-28 02:18:14.920682 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.923865 (Thread-1): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:18:14.924003 (Thread-1): On model.oyster_cards.dim_exit_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_exit_per_day"} */
+drop view if exists "postgres"."dbt"."dim_exit_per_day__dbt_tmp" cascade
+2021-03-28 02:18:14.924115 (Thread-1): Opening a new connection, currently in state closed
+2021-03-28 02:18:14.928654 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:18:14.933970 (Thread-1): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:18:14.934137 (Thread-1): On model.oyster_cards.dim_exit_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_exit_per_day"} */
+drop view if exists "postgres"."dbt"."dim_exit_per_day__dbt_backup" cascade
+2021-03-28 02:18:14.934651 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:18:14.938798 (Thread-1): Writing runtime SQL for node "model.oyster_cards.dim_exit_per_day"
+2021-03-28 02:18:14.939165 (Thread-1): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:18:14.939285 (Thread-1): On model.oyster_cards.dim_exit_per_day: BEGIN
+2021-03-28 02:18:14.939795 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.939942 (Thread-1): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:18:14.940047 (Thread-1): On model.oyster_cards.dim_exit_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_exit_per_day"} */
+
+  create view "postgres"."dbt"."dim_exit_per_day__dbt_tmp" as (
+    select DOW, EndStn, count(1)
+from "postgres"."dbt_dbt"."londond_undeground_data"
+group by DOW, EndStn
+order by count desc
+  );
+
+2021-03-28 02:18:14.942429 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2021-03-28 02:18:14.947055 (Thread-1): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:18:14.947211 (Thread-1): On model.oyster_cards.dim_exit_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_exit_per_day"} */
+alter table "postgres"."dbt"."dim_exit_per_day__dbt_tmp" rename to "dim_exit_per_day"
+2021-03-28 02:18:14.947896 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:18:14.951453 (Thread-1): On model.oyster_cards.dim_exit_per_day: COMMIT
+2021-03-28 02:18:14.951557 (Thread-1): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:18:14.951631 (Thread-1): On model.oyster_cards.dim_exit_per_day: COMMIT
+2021-03-28 02:18:14.954216 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2021-03-28 02:18:14.955365 (Thread-1): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:18:14.955443 (Thread-1): On model.oyster_cards.dim_exit_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_exit_per_day"} */
+drop view if exists "postgres"."dbt"."dim_exit_per_day__dbt_backup" cascade
+2021-03-28 02:18:14.955819 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:18:14.958164 (Thread-1): finished collecting timing info
+2021-03-28 02:18:14.958276 (Thread-1): On model.oyster_cards.dim_exit_per_day: Close
+2021-03-28 02:18:14.958710 (Thread-1): 05:18:14 | 8 of 8 OK created view model dbt.dim_exit_per_day.................... [CREATE VIEW in 0.04s]
+2021-03-28 02:18:14.958821 (Thread-1): Finished running node model.oyster_cards.dim_exit_per_day
+2021-03-28 02:18:14.960128 (MainThread): Acquiring new postgres connection "master".
+2021-03-28 02:18:14.960276 (MainThread): Using postgres connection "master".
+2021-03-28 02:18:14.960335 (MainThread): On master: BEGIN
+2021-03-28 02:18:14.960391 (MainThread): Opening a new connection, currently in state closed
+2021-03-28 02:18:14.963458 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:18:14.963581 (MainThread): On master: COMMIT
+2021-03-28 02:18:14.963643 (MainThread): Using postgres connection "master".
+2021-03-28 02:18:14.963699 (MainThread): On master: COMMIT
+2021-03-28 02:18:14.963938 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-03-28 02:18:14.964083 (MainThread): On master: Close
+2021-03-28 02:18:14.964427 (MainThread): 05:18:14 | 
+2021-03-28 02:18:14.964537 (MainThread): 05:18:14 | Finished running 4 table models, 4 view models in 0.61s.
+2021-03-28 02:18:14.964620 (MainThread): Connection 'master' was properly closed.
+2021-03-28 02:18:14.964679 (MainThread): Connection 'model.oyster_cards.dim_exit_per_day' was properly closed.
+2021-03-28 02:18:14.964734 (MainThread): Connection 'model.oyster_cards.stg_london_bus_data' was properly closed.
+2021-03-28 02:18:14.968526 (MainThread): 
+2021-03-28 02:18:14.968642 (MainThread): Completed with 1 error and 0 warnings:
+2021-03-28 02:18:14.968726 (MainThread): 
+2021-03-28 02:18:14.968807 (MainThread): Database Error in model dim_pass_on_subsystem (models/marts/dim_pass_on_subsystem.sql)
+2021-03-28 02:18:14.968876 (MainThread):   column "pass_type" does not exist
+2021-03-28 02:18:14.968963 (MainThread):   LINE 4:     select subsystem,pass_type,count(1)
+2021-03-28 02:18:14.969058 (MainThread):                                ^
+2021-03-28 02:18:14.969153 (MainThread):   compiled SQL at target/run/oyster_cards/models/marts/dim_pass_on_subsystem.sql
+2021-03-28 02:18:14.969273 (MainThread): 
+Done. PASS=7 WARN=0 ERROR=1 SKIP=0 TOTAL=8
+2021-03-28 02:18:14.969448 (MainThread): Flushing usage events
+2021-03-28 02:19:28.194764 (MainThread): Running with dbt=0.19.0
+2021-03-28 02:19:28.246202 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/home/user/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-03-28 02:19:28.246843 (MainThread): Tracking: do not track
+2021-03-28 02:19:28.277215 (MainThread): Partial parsing not enabled
+2021-03-28 02:19:28.277955 (MainThread): Parsing macros/catalog.sql
+2021-03-28 02:19:28.280592 (MainThread): Parsing macros/relations.sql
+2021-03-28 02:19:28.281720 (MainThread): Parsing macros/adapters.sql
+2021-03-28 02:19:28.299069 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-03-28 02:19:28.301332 (MainThread): Parsing macros/core.sql
+2021-03-28 02:19:28.304637 (MainThread): Parsing macros/adapters/common.sql
+2021-03-28 02:19:28.341256 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-03-28 02:19:28.342765 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-03-28 02:19:28.343996 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-03-28 02:19:28.346232 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-03-28 02:19:28.347981 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-03-28 02:19:28.349370 (MainThread): Parsing macros/etc/query.sql
+2021-03-28 02:19:28.350683 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-03-28 02:19:28.352401 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-03-28 02:19:28.353198 (MainThread): Parsing macros/etc/datetime.sql
+2021-03-28 02:19:28.360590 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-03-28 02:19:28.361883 (MainThread): Parsing macros/materializations/helpers.sql
+2021-03-28 02:19:28.369705 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-03-28 02:19:28.381296 (MainThread): Parsing macros/materializations/table/table.sql
+2021-03-28 02:19:28.387157 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-03-28 02:19:28.413560 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-03-28 02:19:28.415173 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-03-28 02:19:28.429978 (MainThread): Parsing macros/materializations/view/view.sql
+2021-03-28 02:19:28.435413 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-03-28 02:19:28.439463 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-03-28 02:19:28.456935 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-03-28 02:19:28.458407 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-03-28 02:19:28.467431 (MainThread): Partial parsing not enabled
+2021-03-28 02:19:28.486094 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:19:28.497595 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:19:28.501871 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:19:28.505353 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:19:28.508376 (MainThread): Acquiring new postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:28.511420 (MainThread): Acquiring new postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:28.514914 (MainThread): Acquiring new postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:28.518049 (MainThread): Acquiring new postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:28.596421 (MainThread): Found 8 models, 6 tests, 0 snapshots, 0 analyses, 138 macros, 0 operations, 0 seed files, 1 source, 0 exposures
+2021-03-28 02:19:28.597582 (MainThread): 
+2021-03-28 02:19:28.597910 (MainThread): Acquiring new postgres connection "master".
+2021-03-28 02:19:28.599038 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_postgres".
+2021-03-28 02:19:28.604570 (ThreadPoolExecutor-0_1): Acquiring new postgres connection "list_postgres".
+2021-03-28 02:19:28.607137 (ThreadPoolExecutor-0_0): Using postgres connection "list_postgres".
+2021-03-28 02:19:28.608077 (ThreadPoolExecutor-0_1): Using postgres connection "list_postgres".
+2021-03-28 02:19:28.608317 (ThreadPoolExecutor-0_0): On list_postgres: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-03-28 02:19:28.608475 (ThreadPoolExecutor-0_1): On list_postgres: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "list_postgres"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-03-28 02:19:28.608635 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-03-28 02:19:28.608794 (ThreadPoolExecutor-0_1): Opening a new connection, currently in state init
+2021-03-28 02:19:28.615017 (ThreadPoolExecutor-0_0): SQL status: SELECT 7 in 0.01 seconds
+2021-03-28 02:19:28.615607 (ThreadPoolExecutor-0_1): SQL status: SELECT 7 in 0.01 seconds
+2021-03-28 02:19:28.617731 (ThreadPoolExecutor-0_0): On list_postgres: Close
+2021-03-28 02:19:28.618100 (ThreadPoolExecutor-0_1): On list_postgres: Close
+2021-03-28 02:19:28.620345 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_postgres_dbt".
+2021-03-28 02:19:28.620729 (ThreadPoolExecutor-1_1): Acquiring new postgres connection "list_postgres_dbt_dbt".
+2021-03-28 02:19:28.625712 (ThreadPoolExecutor-1_0): Using postgres connection "list_postgres_dbt".
+2021-03-28 02:19:28.626835 (ThreadPoolExecutor-1_1): Using postgres connection "list_postgres_dbt_dbt".
+2021-03-28 02:19:28.626929 (ThreadPoolExecutor-1_0): On list_postgres_dbt: BEGIN
+2021-03-28 02:19:28.627056 (ThreadPoolExecutor-1_1): On list_postgres_dbt_dbt: BEGIN
+2021-03-28 02:19:28.627160 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-03-28 02:19:28.627280 (ThreadPoolExecutor-1_1): Opening a new connection, currently in state closed
+2021-03-28 02:19:28.630453 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:28.630627 (ThreadPoolExecutor-1_0): Using postgres connection "list_postgres_dbt".
+2021-03-28 02:19:28.630732 (ThreadPoolExecutor-1_0): On list_postgres_dbt: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "list_postgres_dbt"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt'
+  
+2021-03-28 02:19:28.631788 (ThreadPoolExecutor-1_1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:28.631884 (ThreadPoolExecutor-1_1): Using postgres connection "list_postgres_dbt_dbt".
+2021-03-28 02:19:28.631949 (ThreadPoolExecutor-1_1): On list_postgres_dbt_dbt: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "list_postgres_dbt_dbt"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dbt'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dbt'
+  
+2021-03-28 02:19:28.633585 (ThreadPoolExecutor-1_0): SQL status: SELECT 10 in 0.00 seconds
+2021-03-28 02:19:28.634453 (ThreadPoolExecutor-1_0): On list_postgres_dbt: ROLLBACK
+2021-03-28 02:19:28.634556 (ThreadPoolExecutor-1_1): SQL status: SELECT 4 in 0.00 seconds
+2021-03-28 02:19:28.635056 (ThreadPoolExecutor-1_1): On list_postgres_dbt_dbt: ROLLBACK
+2021-03-28 02:19:28.635135 (ThreadPoolExecutor-1_0): On list_postgres_dbt: Close
+2021-03-28 02:19:28.635485 (ThreadPoolExecutor-1_1): On list_postgres_dbt_dbt: Close
+2021-03-28 02:19:28.640459 (MainThread): Using postgres connection "master".
+2021-03-28 02:19:28.640582 (MainThread): On master: BEGIN
+2021-03-28 02:19:28.640654 (MainThread): Opening a new connection, currently in state init
+2021-03-28 02:19:28.643597 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:28.643699 (MainThread): Using postgres connection "master".
+2021-03-28 02:19:28.643761 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-03-28 02:19:28.671297 (MainThread): SQL status: SELECT 3 in 0.03 seconds
+2021-03-28 02:19:28.671818 (MainThread): On master: ROLLBACK
+2021-03-28 02:19:28.672084 (MainThread): Using postgres connection "master".
+2021-03-28 02:19:28.672153 (MainThread): On master: BEGIN
+2021-03-28 02:19:28.672683 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:28.672808 (MainThread): On master: COMMIT
+2021-03-28 02:19:28.672865 (MainThread): Using postgres connection "master".
+2021-03-28 02:19:28.672916 (MainThread): On master: COMMIT
+2021-03-28 02:19:28.673177 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-03-28 02:19:28.673249 (MainThread): On master: Close
+2021-03-28 02:19:28.673597 (MainThread): 05:19:28 | Concurrency: 2 threads (target='dev')
+2021-03-28 02:19:28.673742 (MainThread): 05:19:28 | 
+2021-03-28 02:19:28.676019 (Thread-1): Began running node model.oyster_cards.oyster_data
+2021-03-28 02:19:28.676362 (Thread-1): 05:19:28 | 1 of 8 START table model dbt_dbt.oyster_data......................... [RUN]
+2021-03-28 02:19:28.676754 (Thread-1): Acquiring new postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:28.676891 (Thread-1): Compiling model.oyster_cards.oyster_data
+2021-03-28 02:19:28.680811 (Thread-1): Writing injected SQL for node "model.oyster_cards.oyster_data"
+2021-03-28 02:19:28.681220 (Thread-1): finished collecting timing info
+2021-03-28 02:19:28.704654 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:28.704840 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+drop table if exists "postgres"."dbt_dbt"."oyster_data__dbt_tmp" cascade
+2021-03-28 02:19:28.704962 (Thread-1): Opening a new connection, currently in state closed
+2021-03-28 02:19:28.708297 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:19:28.712384 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:28.712499 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+drop table if exists "postgres"."dbt_dbt"."oyster_data__dbt_backup" cascade
+2021-03-28 02:19:28.712867 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:19:28.722421 (Thread-1): Writing runtime SQL for node "model.oyster_cards.oyster_data"
+2021-03-28 02:19:28.722720 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:28.722789 (Thread-1): On model.oyster_cards.oyster_data: BEGIN
+2021-03-28 02:19:28.723106 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:28.723234 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:28.723292 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+
+
+  create  table "postgres"."dbt_dbt"."oyster_data__dbt_tmp"
+  as (
+    
+
+with source as (
+
+    select * from "postgres"."raw"."Nov09JnyExport"
+
+),
+renamed as (
+
+    select
+        downo as DOWno,
+        daytype as DOW,
+        subsystem,
+        startstn as StartStn,
+        EndStation as EndStn,
+        enttime,
+        enttimehhmm as EnTimeHHMM,
+        extime,
+        extimehhmm as ExTimeHHMM,
+        ZVPPT as Zones,
+        JNYTYP as JourneyType,
+        dailycapping,
+        FFare as FullFare,
+        DFare as DiscountFare,
+        RouteID as BusRoute,
+        finalproduct as PassType
+
+    from source
+
+)
+
+select * from renamed
+  );
+2021-03-28 02:19:28.779390 (Thread-1): SQL status: SELECT 49378 in 0.06 seconds
+2021-03-28 02:19:28.785974 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:28.786070 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+alter table "postgres"."dbt_dbt"."oyster_data" rename to "oyster_data__dbt_backup"
+2021-03-28 02:19:28.786547 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:28.789470 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:28.789544 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+alter table "postgres"."dbt_dbt"."oyster_data__dbt_tmp" rename to "oyster_data"
+2021-03-28 02:19:28.789927 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:28.795952 (Thread-1): On model.oyster_cards.oyster_data: COMMIT
+2021-03-28 02:19:28.796026 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:28.796080 (Thread-1): On model.oyster_cards.oyster_data: COMMIT
+2021-03-28 02:19:28.817166 (Thread-1): SQL status: COMMIT in 0.02 seconds
+2021-03-28 02:19:28.826731 (Thread-1): Using postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:28.827037 (Thread-1): On model.oyster_cards.oyster_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.oyster_data"} */
+drop table if exists "postgres"."dbt_dbt"."oyster_data__dbt_backup" cascade
+2021-03-28 02:19:28.836450 (Thread-1): SQL status: DROP TABLE in 0.01 seconds
+2021-03-28 02:19:28.845048 (Thread-1): finished collecting timing info
+2021-03-28 02:19:28.845448 (Thread-1): On model.oyster_cards.oyster_data: Close
+2021-03-28 02:19:28.846750 (Thread-1): 05:19:28 | 1 of 8 OK created table model dbt_dbt.oyster_data.................... [SELECT 49378 in 0.17s]
+2021-03-28 02:19:28.847139 (Thread-1): Finished running node model.oyster_cards.oyster_data
+2021-03-28 02:19:28.848886 (Thread-2): Began running node model.oyster_cards.londond_undeground_data
+2021-03-28 02:19:28.849665 (Thread-2): 05:19:28 | 2 of 8 START table model dbt_dbt.londond_undeground_data............. [RUN]
+2021-03-28 02:19:28.850479 (Thread-1): Began running node model.oyster_cards.dim_pass_on_subsystem
+2021-03-28 02:19:28.851728 (Thread-2): Acquiring new postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:28.852458 (Thread-1): 05:19:28 | 3 of 8 START view model dbt.dim_pass_on_subsystem.................... [RUN]
+2021-03-28 02:19:28.852923 (Thread-2): Compiling model.oyster_cards.londond_undeground_data
+2021-03-28 02:19:28.859503 (Thread-1): Acquiring new postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:19:28.862222 (Thread-2): Writing injected SQL for node "model.oyster_cards.londond_undeground_data"
+2021-03-28 02:19:28.862698 (Thread-1): Compiling model.oyster_cards.dim_pass_on_subsystem
+2021-03-28 02:19:28.873506 (Thread-1): Writing injected SQL for node "model.oyster_cards.dim_pass_on_subsystem"
+2021-03-28 02:19:28.874649 (Thread-2): finished collecting timing info
+2021-03-28 02:19:28.881686 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:28.881979 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+drop table if exists "postgres"."dbt_dbt"."londond_undeground_data__dbt_tmp" cascade
+2021-03-28 02:19:28.882253 (Thread-1): finished collecting timing info
+2021-03-28 02:19:28.882656 (Thread-2): Opening a new connection, currently in state closed
+2021-03-28 02:19:28.902879 (Thread-2): SQL status: DROP TABLE in 0.02 seconds
+2021-03-28 02:19:28.903285 (Thread-1): Using postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:19:28.907018 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:28.907160 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_pass_on_subsystem"} */
+drop view if exists "postgres"."dbt"."dim_pass_on_subsystem__dbt_tmp" cascade
+2021-03-28 02:19:28.907302 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+drop table if exists "postgres"."dbt_dbt"."londond_undeground_data__dbt_backup" cascade
+2021-03-28 02:19:28.907443 (Thread-1): Opening a new connection, currently in state closed
+2021-03-28 02:19:28.907918 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:19:28.910377 (Thread-2): Writing runtime SQL for node "model.oyster_cards.londond_undeground_data"
+2021-03-28 02:19:28.910701 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:28.910779 (Thread-2): On model.oyster_cards.londond_undeground_data: BEGIN
+2021-03-28 02:19:28.911052 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:19:28.911155 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:28.914219 (Thread-1): Using postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:19:28.914311 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:28.914391 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_pass_on_subsystem"} */
+drop view if exists "postgres"."dbt"."dim_pass_on_subsystem__dbt_backup" cascade
+2021-03-28 02:19:28.914467 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+
+
+  create  table "postgres"."dbt_dbt"."londond_undeground_data__dbt_tmp"
+  as (
+    
+
+select *
+from "postgres"."dbt_dbt"."oyster_data"
+where subsystem LIKE '%LUL%'
+
+-- ALTER TABLE vendors ADD COLUMN ID SERIAL PRIMARY KEY;
+  );
+2021-03-28 02:19:28.914731 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:19:28.919852 (Thread-1): Writing runtime SQL for node "model.oyster_cards.dim_pass_on_subsystem"
+2021-03-28 02:19:28.920095 (Thread-1): Using postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:19:28.920186 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: BEGIN
+2021-03-28 02:19:28.920503 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:28.920596 (Thread-1): Using postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:19:28.920654 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_pass_on_subsystem"} */
+
+  create view "postgres"."dbt"."dim_pass_on_subsystem__dbt_tmp" as (
+    select subsystem,PassType,count(1)
+from "postgres"."dbt_dbt"."oyster_data"
+group by subsystem,PassType
+order by subsystem,PassType
+  );
+
+2021-03-28 02:19:28.921956 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2021-03-28 02:19:28.925261 (Thread-1): Using postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:19:28.925349 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_pass_on_subsystem"} */
+alter table "postgres"."dbt"."dim_pass_on_subsystem__dbt_tmp" rename to "dim_pass_on_subsystem"
+2021-03-28 02:19:28.925715 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:28.927888 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: COMMIT
+2021-03-28 02:19:28.927967 (Thread-1): Using postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:19:28.928027 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: COMMIT
+2021-03-28 02:19:28.940469 (Thread-2): SQL status: SELECT 16064 in 0.03 seconds
+2021-03-28 02:19:28.943590 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:28.943678 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+alter table "postgres"."dbt_dbt"."londond_undeground_data" rename to "londond_undeground_data__dbt_backup"
+2021-03-28 02:19:28.943785 (Thread-1): SQL status: COMMIT in 0.02 seconds
+2021-03-28 02:19:28.946278 (Thread-1): Using postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:19:28.946421 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_pass_on_subsystem"} */
+drop view if exists "postgres"."dbt"."dim_pass_on_subsystem__dbt_backup" cascade
+2021-03-28 02:19:28.946533 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:28.978597 (Thread-1): SQL status: DROP VIEW in 0.03 seconds
+2021-03-28 02:19:28.978898 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:28.981124 (Thread-1): finished collecting timing info
+2021-03-28 02:19:28.981253 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+alter table "postgres"."dbt_dbt"."londond_undeground_data__dbt_tmp" rename to "londond_undeground_data"
+2021-03-28 02:19:28.981444 (Thread-1): On model.oyster_cards.dim_pass_on_subsystem: Close
+2021-03-28 02:19:28.982046 (Thread-1): 05:19:28 | 3 of 8 OK created view model dbt.dim_pass_on_subsystem............... [CREATE VIEW in 0.12s]
+2021-03-28 02:19:28.982174 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:28.982416 (Thread-1): Finished running node model.oyster_cards.dim_pass_on_subsystem
+2021-03-28 02:19:28.984869 (Thread-2): On model.oyster_cards.londond_undeground_data: COMMIT
+2021-03-28 02:19:28.985053 (Thread-1): Began running node model.oyster_cards.stg_croydon_tram_data
+2021-03-28 02:19:28.985180 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:28.985510 (Thread-1): 05:19:28 | 4 of 8 START table model dbt.stg_croydon_tram_data................... [RUN]
+2021-03-28 02:19:28.985633 (Thread-2): On model.oyster_cards.londond_undeground_data: COMMIT
+2021-03-28 02:19:28.985937 (Thread-1): Acquiring new postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:28.986170 (Thread-1): Compiling model.oyster_cards.stg_croydon_tram_data
+2021-03-28 02:19:28.988087 (Thread-1): Writing injected SQL for node "model.oyster_cards.stg_croydon_tram_data"
+2021-03-28 02:19:28.988332 (Thread-1): finished collecting timing info
+2021-03-28 02:19:28.990024 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:28.990098 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+drop table if exists "postgres"."dbt"."stg_croydon_tram_data__dbt_tmp" cascade
+2021-03-28 02:19:28.990160 (Thread-1): Opening a new connection, currently in state closed
+2021-03-28 02:19:28.993362 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:19:28.996114 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:28.996349 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+drop table if exists "postgres"."dbt"."stg_croydon_tram_data__dbt_backup" cascade
+2021-03-28 02:19:28.996744 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:19:29.000117 (Thread-1): Writing runtime SQL for node "model.oyster_cards.stg_croydon_tram_data"
+2021-03-28 02:19:29.000661 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:29.000846 (Thread-2): SQL status: COMMIT in 0.01 seconds
+2021-03-28 02:19:29.000963 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: BEGIN
+2021-03-28 02:19:29.002289 (Thread-2): Using postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:29.002489 (Thread-2): On model.oyster_cards.londond_undeground_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.londond_undeground_data"} */
+drop table if exists "postgres"."dbt_dbt"."londond_undeground_data__dbt_backup" cascade
+2021-03-28 02:19:29.002747 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:29.002904 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:29.003001 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+
+
+  create  table "postgres"."dbt"."stg_croydon_tram_data__dbt_tmp"
+  as (
+    select *
+from "postgres"."dbt_dbt"."oyster_data"
+where subsystem LIKE '%TRAM%'
+  );
+2021-03-28 02:19:29.006987 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:19:29.009493 (Thread-2): finished collecting timing info
+2021-03-28 02:19:29.009644 (Thread-2): On model.oyster_cards.londond_undeground_data: Close
+2021-03-28 02:19:29.010204 (Thread-2): 05:19:29 | 2 of 8 OK created table model dbt_dbt.londond_undeground_data........ [SELECT 16064 in 0.16s]
+2021-03-28 02:19:29.010425 (Thread-2): Finished running node model.oyster_cards.londond_undeground_data
+2021-03-28 02:19:29.010692 (Thread-2): Began running node model.oyster_cards.stg_london_bus_data
+2021-03-28 02:19:29.011436 (Thread-2): 05:19:29 | 5 of 8 START table model dbt.stg_london_bus_data..................... [RUN]
+2021-03-28 02:19:29.012366 (Thread-2): Acquiring new postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:29.012469 (Thread-2): Compiling model.oyster_cards.stg_london_bus_data
+2021-03-28 02:19:29.014137 (Thread-2): Writing injected SQL for node "model.oyster_cards.stg_london_bus_data"
+2021-03-28 02:19:29.014358 (Thread-2): finished collecting timing info
+2021-03-28 02:19:29.016575 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:29.016661 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+drop table if exists "postgres"."dbt"."stg_london_bus_data__dbt_tmp" cascade
+2021-03-28 02:19:29.016729 (Thread-2): Opening a new connection, currently in state closed
+2021-03-28 02:19:29.017123 (Thread-1): SQL status: SELECT 311 in 0.01 seconds
+2021-03-28 02:19:29.022923 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:29.023123 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+alter table "postgres"."dbt"."stg_croydon_tram_data" rename to "stg_croydon_tram_data__dbt_backup"
+2021-03-28 02:19:29.023796 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:29.029066 (Thread-2): SQL status: DROP TABLE in 0.01 seconds
+2021-03-28 02:19:29.029366 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:29.032535 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:29.032667 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+alter table "postgres"."dbt"."stg_croydon_tram_data__dbt_tmp" rename to "stg_croydon_tram_data"
+2021-03-28 02:19:29.032845 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+drop table if exists "postgres"."dbt"."stg_london_bus_data__dbt_backup" cascade
+2021-03-28 02:19:29.033553 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:19:29.036271 (Thread-2): Writing runtime SQL for node "model.oyster_cards.stg_london_bus_data"
+2021-03-28 02:19:29.036442 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:29.038504 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: COMMIT
+2021-03-28 02:19:29.038579 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:29.038695 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: COMMIT
+2021-03-28 02:19:29.039077 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:29.039149 (Thread-2): On model.oyster_cards.stg_london_bus_data: BEGIN
+2021-03-28 02:19:29.039558 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:29.039666 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:29.039724 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+
+
+  create  table "postgres"."dbt"."stg_london_bus_data__dbt_tmp"
+  as (
+    select *
+from "postgres"."dbt_dbt"."oyster_data"
+where subsystem = 'LTB'
+  );
+2021-03-28 02:19:29.041978 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2021-03-28 02:19:29.043159 (Thread-1): Using postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:29.043231 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_croydon_tram_data"} */
+drop table if exists "postgres"."dbt"."stg_croydon_tram_data__dbt_backup" cascade
+2021-03-28 02:19:29.047008 (Thread-1): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:19:29.049879 (Thread-1): finished collecting timing info
+2021-03-28 02:19:29.049996 (Thread-1): On model.oyster_cards.stg_croydon_tram_data: Close
+2021-03-28 02:19:29.050588 (Thread-1): 05:19:29 | 4 of 8 OK created table model dbt.stg_croydon_tram_data.............. [SELECT 311 in 0.06s]
+2021-03-28 02:19:29.050846 (Thread-1): Finished running node model.oyster_cards.stg_croydon_tram_data
+2021-03-28 02:19:29.051016 (Thread-1): Began running node model.oyster_cards.dim_avg_travel_time
+2021-03-28 02:19:29.051386 (Thread-1): 05:19:29 | 6 of 8 START view model dbt.dim_avg_travel_time...................... [RUN]
+2021-03-28 02:19:29.051732 (Thread-1): Acquiring new postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:19:29.051943 (Thread-1): Compiling model.oyster_cards.dim_avg_travel_time
+2021-03-28 02:19:29.053858 (Thread-1): Writing injected SQL for node "model.oyster_cards.dim_avg_travel_time"
+2021-03-28 02:19:29.054204 (Thread-1): finished collecting timing info
+2021-03-28 02:19:29.056342 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:19:29.056428 (Thread-1): On model.oyster_cards.dim_avg_travel_time: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_avg_travel_time"} */
+drop view if exists "postgres"."dbt"."dim_avg_travel_time__dbt_tmp" cascade
+2021-03-28 02:19:29.056496 (Thread-1): Opening a new connection, currently in state closed
+2021-03-28 02:19:29.059678 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:19:29.065103 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:19:29.065227 (Thread-1): On model.oyster_cards.dim_avg_travel_time: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_avg_travel_time"} */
+drop view if exists "postgres"."dbt"."dim_avg_travel_time__dbt_backup" cascade
+2021-03-28 02:19:29.065617 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:19:29.068801 (Thread-1): Writing runtime SQL for node "model.oyster_cards.dim_avg_travel_time"
+2021-03-28 02:19:29.069119 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:19:29.069217 (Thread-1): On model.oyster_cards.dim_avg_travel_time: BEGIN
+2021-03-28 02:19:29.069620 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:29.069734 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:19:29.069802 (Thread-1): On model.oyster_cards.dim_avg_travel_time: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_avg_travel_time"} */
+
+  create view "postgres"."dbt"."dim_avg_travel_time__dbt_tmp" as (
+    select round(avg(extime-enttime),2) as travel_time_minutes
+from "postgres"."dbt_dbt"."londond_undeground_data"
+  );
+
+2021-03-28 02:19:29.071596 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2021-03-28 02:19:29.076396 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:19:29.076502 (Thread-1): On model.oyster_cards.dim_avg_travel_time: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_avg_travel_time"} */
+alter table "postgres"."dbt"."dim_avg_travel_time__dbt_tmp" rename to "dim_avg_travel_time"
+2021-03-28 02:19:29.076645 (Thread-2): SQL status: SELECT 31823 in 0.04 seconds
+2021-03-28 02:19:29.079521 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:29.079601 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+alter table "postgres"."dbt"."stg_london_bus_data" rename to "stg_london_bus_data__dbt_backup"
+2021-03-28 02:19:29.079745 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:29.082262 (Thread-1): On model.oyster_cards.dim_avg_travel_time: COMMIT
+2021-03-28 02:19:29.082346 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:19:29.082407 (Thread-1): On model.oyster_cards.dim_avg_travel_time: COMMIT
+2021-03-28 02:19:29.082551 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:29.085645 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:29.085739 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+alter table "postgres"."dbt"."stg_london_bus_data__dbt_tmp" rename to "stg_london_bus_data"
+2021-03-28 02:19:29.086183 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:29.088812 (Thread-2): On model.oyster_cards.stg_london_bus_data: COMMIT
+2021-03-28 02:19:29.088903 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:29.088961 (Thread-2): On model.oyster_cards.stg_london_bus_data: COMMIT
+2021-03-28 02:19:29.106109 (Thread-1): SQL status: COMMIT in 0.02 seconds
+2021-03-28 02:19:29.107605 (Thread-1): Using postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:19:29.107682 (Thread-1): On model.oyster_cards.dim_avg_travel_time: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_avg_travel_time"} */
+drop view if exists "postgres"."dbt"."dim_avg_travel_time__dbt_backup" cascade
+2021-03-28 02:19:29.108029 (Thread-2): SQL status: COMMIT in 0.02 seconds
+2021-03-28 02:19:29.108984 (Thread-2): Using postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:29.109057 (Thread-2): On model.oyster_cards.stg_london_bus_data: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.stg_london_bus_data"} */
+drop table if exists "postgres"."dbt"."stg_london_bus_data__dbt_backup" cascade
+2021-03-28 02:19:29.109268 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:19:29.111659 (Thread-1): finished collecting timing info
+2021-03-28 02:19:29.111767 (Thread-1): On model.oyster_cards.dim_avg_travel_time: Close
+2021-03-28 02:19:29.112196 (Thread-1): 05:19:29 | 6 of 8 OK created view model dbt.dim_avg_travel_time................. [CREATE VIEW in 0.06s]
+2021-03-28 02:19:29.112328 (Thread-1): Finished running node model.oyster_cards.dim_avg_travel_time
+2021-03-28 02:19:29.112460 (Thread-1): Began running node model.oyster_cards.dim_entrance_per_day
+2021-03-28 02:19:29.112826 (Thread-2): SQL status: DROP TABLE in 0.00 seconds
+2021-03-28 02:19:29.113151 (Thread-1): 05:19:29 | 7 of 8 START view model dbt.dim_entrance_per_day..................... [RUN]
+2021-03-28 02:19:29.115600 (Thread-2): finished collecting timing info
+2021-03-28 02:19:29.116190 (Thread-1): Acquiring new postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:19:29.116470 (Thread-1): Compiling model.oyster_cards.dim_entrance_per_day
+2021-03-28 02:19:29.116346 (Thread-2): On model.oyster_cards.stg_london_bus_data: Close
+2021-03-28 02:19:29.118685 (Thread-1): Writing injected SQL for node "model.oyster_cards.dim_entrance_per_day"
+2021-03-28 02:19:29.119273 (Thread-2): 05:19:29 | 5 of 8 OK created table model dbt.stg_london_bus_data................ [SELECT 31823 in 0.11s]
+2021-03-28 02:19:29.119473 (Thread-2): Finished running node model.oyster_cards.stg_london_bus_data
+2021-03-28 02:19:29.119676 (Thread-2): Began running node model.oyster_cards.dim_exit_per_day
+2021-03-28 02:19:29.120068 (Thread-2): 05:19:29 | 8 of 8 START view model dbt.dim_exit_per_day......................... [RUN]
+2021-03-28 02:19:29.120345 (Thread-2): Acquiring new postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:19:29.120460 (Thread-2): Compiling model.oyster_cards.dim_exit_per_day
+2021-03-28 02:19:29.122746 (Thread-2): Writing injected SQL for node "model.oyster_cards.dim_exit_per_day"
+2021-03-28 02:19:29.123049 (Thread-1): finished collecting timing info
+2021-03-28 02:19:29.125603 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:19:29.125735 (Thread-1): On model.oyster_cards.dim_entrance_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_entrance_per_day"} */
+drop view if exists "postgres"."dbt"."dim_entrance_per_day__dbt_tmp" cascade
+2021-03-28 02:19:29.125861 (Thread-1): Opening a new connection, currently in state closed
+2021-03-28 02:19:29.126123 (Thread-2): finished collecting timing info
+2021-03-28 02:19:29.128498 (Thread-2): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:19:29.128658 (Thread-2): On model.oyster_cards.dim_exit_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_exit_per_day"} */
+drop view if exists "postgres"."dbt"."dim_exit_per_day__dbt_tmp" cascade
+2021-03-28 02:19:29.128777 (Thread-2): Opening a new connection, currently in state closed
+2021-03-28 02:19:29.129658 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:19:29.133667 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:19:29.133806 (Thread-1): On model.oyster_cards.dim_entrance_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_entrance_per_day"} */
+drop view if exists "postgres"."dbt"."dim_entrance_per_day__dbt_backup" cascade
+2021-03-28 02:19:29.134242 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:19:29.137091 (Thread-1): Writing runtime SQL for node "model.oyster_cards.dim_entrance_per_day"
+2021-03-28 02:19:29.137273 (Thread-2): SQL status: DROP VIEW in 0.01 seconds
+2021-03-28 02:19:29.141121 (Thread-2): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:19:29.141247 (Thread-2): On model.oyster_cards.dim_exit_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_exit_per_day"} */
+drop view if exists "postgres"."dbt"."dim_exit_per_day__dbt_backup" cascade
+2021-03-28 02:19:29.141538 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:19:29.141666 (Thread-2): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:19:29.141775 (Thread-1): On model.oyster_cards.dim_entrance_per_day: BEGIN
+2021-03-28 02:19:29.144496 (Thread-2): Writing runtime SQL for node "model.oyster_cards.dim_exit_per_day"
+2021-03-28 02:19:29.144892 (Thread-2): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:19:29.144983 (Thread-2): On model.oyster_cards.dim_exit_per_day: BEGIN
+2021-03-28 02:19:29.145104 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:29.145252 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:29.145378 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:19:29.145501 (Thread-2): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:19:29.145611 (Thread-1): On model.oyster_cards.dim_entrance_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_entrance_per_day"} */
+
+  create view "postgres"."dbt"."dim_entrance_per_day__dbt_tmp" as (
+    select DOW, StartStn, count(1)
+from "postgres"."dbt_dbt"."londond_undeground_data"
+group by DOW, StartStn
+order by StartStn,count desc
+  );
+
+2021-03-28 02:19:29.145729 (Thread-2): On model.oyster_cards.dim_exit_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_exit_per_day"} */
+
+  create view "postgres"."dbt"."dim_exit_per_day__dbt_tmp" as (
+    select DOW, EndStn, count(1)
+from "postgres"."dbt_dbt"."londond_undeground_data"
+group by DOW, EndStn
+order by count desc
+  );
+
+2021-03-28 02:19:29.147508 (Thread-2): SQL status: CREATE VIEW in 0.00 seconds
+2021-03-28 02:19:29.147647 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2021-03-28 02:19:29.153734 (Thread-2): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:19:29.157623 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:19:29.157895 (Thread-2): On model.oyster_cards.dim_exit_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_exit_per_day"} */
+alter table "postgres"."dbt"."dim_exit_per_day__dbt_tmp" rename to "dim_exit_per_day"
+2021-03-28 02:19:29.158061 (Thread-1): On model.oyster_cards.dim_entrance_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_entrance_per_day"} */
+alter table "postgres"."dbt"."dim_entrance_per_day__dbt_tmp" rename to "dim_entrance_per_day"
+2021-03-28 02:19:29.158654 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:29.161014 (Thread-2): On model.oyster_cards.dim_exit_per_day: COMMIT
+2021-03-28 02:19:29.161091 (Thread-2): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:19:29.161150 (Thread-2): On model.oyster_cards.dim_exit_per_day: COMMIT
+2021-03-28 02:19:29.161259 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-03-28 02:19:29.163305 (Thread-1): On model.oyster_cards.dim_entrance_per_day: COMMIT
+2021-03-28 02:19:29.163443 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:19:29.163597 (Thread-1): On model.oyster_cards.dim_entrance_per_day: COMMIT
+2021-03-28 02:19:29.163744 (Thread-2): SQL status: COMMIT in 0.00 seconds
+2021-03-28 02:19:29.165147 (Thread-2): Using postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:19:29.165217 (Thread-2): On model.oyster_cards.dim_exit_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_exit_per_day"} */
+drop view if exists "postgres"."dbt"."dim_exit_per_day__dbt_backup" cascade
+2021-03-28 02:19:29.165553 (Thread-2): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:19:29.168149 (Thread-2): finished collecting timing info
+2021-03-28 02:19:29.168283 (Thread-2): On model.oyster_cards.dim_exit_per_day: Close
+2021-03-28 02:19:29.168406 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2021-03-28 02:19:29.170040 (Thread-1): Using postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:19:29.170164 (Thread-1): On model.oyster_cards.dim_entrance_per_day: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "node_id": "model.oyster_cards.dim_entrance_per_day"} */
+drop view if exists "postgres"."dbt"."dim_entrance_per_day__dbt_backup" cascade
+2021-03-28 02:19:29.170685 (Thread-2): 05:19:29 | 8 of 8 OK created view model dbt.dim_exit_per_day.................... [CREATE VIEW in 0.05s]
+2021-03-28 02:19:29.170845 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-03-28 02:19:29.170986 (Thread-2): Finished running node model.oyster_cards.dim_exit_per_day
+2021-03-28 02:19:29.173833 (Thread-1): finished collecting timing info
+2021-03-28 02:19:29.174082 (Thread-1): On model.oyster_cards.dim_entrance_per_day: Close
+2021-03-28 02:19:29.174750 (Thread-1): 05:19:29 | 7 of 8 OK created view model dbt.dim_entrance_per_day................ [CREATE VIEW in 0.06s]
+2021-03-28 02:19:29.174928 (Thread-1): Finished running node model.oyster_cards.dim_entrance_per_day
+2021-03-28 02:19:29.176051 (MainThread): Acquiring new postgres connection "master".
+2021-03-28 02:19:29.176179 (MainThread): Using postgres connection "master".
+2021-03-28 02:19:29.176253 (MainThread): On master: BEGIN
+2021-03-28 02:19:29.176321 (MainThread): Opening a new connection, currently in state closed
+2021-03-28 02:19:29.179256 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:29.179388 (MainThread): On master: COMMIT
+2021-03-28 02:19:29.179463 (MainThread): Using postgres connection "master".
+2021-03-28 02:19:29.179529 (MainThread): On master: COMMIT
+2021-03-28 02:19:29.179744 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-03-28 02:19:29.179836 (MainThread): On master: Close
+2021-03-28 02:19:29.180167 (MainThread): 05:19:29 | 
+2021-03-28 02:19:29.180277 (MainThread): 05:19:29 | Finished running 4 table models, 4 view models in 0.58s.
+2021-03-28 02:19:29.180361 (MainThread): Connection 'master' was properly closed.
+2021-03-28 02:19:29.180422 (MainThread): Connection 'model.oyster_cards.dim_exit_per_day' was properly closed.
+2021-03-28 02:19:29.180477 (MainThread): Connection 'model.oyster_cards.dim_entrance_per_day' was properly closed.
+2021-03-28 02:19:29.186677 (MainThread): 
+2021-03-28 02:19:29.186874 (MainThread): Completed successfully
+2021-03-28 02:19:29.186988 (MainThread): 
+Done. PASS=8 WARN=0 ERROR=0 SKIP=0 TOTAL=8
+2021-03-28 02:19:29.187129 (MainThread): Flushing usage events
+2021-03-28 02:19:41.807311 (MainThread): Running with dbt=0.19.0
+2021-03-28 02:19:41.859995 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.generate.GenerateTask'>, compile=True, debug=False, defer=None, exclude=None, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/home/user/.dbt', project_dir=None, record_timing_info=None, rpc_method='docs.generate', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='generate', write_json=True)
+2021-03-28 02:19:41.860542 (MainThread): Tracking: do not track
+2021-03-28 02:19:41.890599 (MainThread): Partial parsing not enabled
+2021-03-28 02:19:41.891385 (MainThread): Parsing macros/catalog.sql
+2021-03-28 02:19:41.894046 (MainThread): Parsing macros/relations.sql
+2021-03-28 02:19:41.895283 (MainThread): Parsing macros/adapters.sql
+2021-03-28 02:19:41.912798 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-03-28 02:19:41.914984 (MainThread): Parsing macros/core.sql
+2021-03-28 02:19:41.918144 (MainThread): Parsing macros/adapters/common.sql
+2021-03-28 02:19:41.955700 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-03-28 02:19:41.957147 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-03-28 02:19:41.958356 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-03-28 02:19:41.960688 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-03-28 02:19:41.962197 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-03-28 02:19:41.963568 (MainThread): Parsing macros/etc/query.sql
+2021-03-28 02:19:41.964390 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-03-28 02:19:41.965953 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-03-28 02:19:41.966744 (MainThread): Parsing macros/etc/datetime.sql
+2021-03-28 02:19:41.974215 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-03-28 02:19:41.975618 (MainThread): Parsing macros/materializations/helpers.sql
+2021-03-28 02:19:41.982873 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-03-28 02:19:41.994942 (MainThread): Parsing macros/materializations/table/table.sql
+2021-03-28 02:19:42.000362 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-03-28 02:19:42.026927 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-03-28 02:19:42.028419 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-03-28 02:19:42.043687 (MainThread): Parsing macros/materializations/view/view.sql
+2021-03-28 02:19:42.048776 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-03-28 02:19:42.052796 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-03-28 02:19:42.070536 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-03-28 02:19:42.072338 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-03-28 02:19:42.081170 (MainThread): Partial parsing not enabled
+2021-03-28 02:19:42.100164 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:19:42.108630 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:19:42.111368 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:19:42.114108 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:19:42.116928 (MainThread): Acquiring new postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:42.119753 (MainThread): Acquiring new postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:42.123384 (MainThread): Acquiring new postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:42.126016 (MainThread): Acquiring new postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:42.204238 (MainThread): Found 8 models, 6 tests, 0 snapshots, 0 analyses, 138 macros, 0 operations, 0 seed files, 1 source, 0 exposures
+2021-03-28 02:19:42.205604 (MainThread): 
+2021-03-28 02:19:42.205972 (MainThread): Acquiring new postgres connection "master".
+2021-03-28 02:19:42.207261 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_postgres_dbt".
+2021-03-28 02:19:42.212821 (ThreadPoolExecutor-0_1): Acquiring new postgres connection "list_postgres_dbt_dbt".
+2021-03-28 02:19:42.215447 (ThreadPoolExecutor-0_0): Using postgres connection "list_postgres_dbt".
+2021-03-28 02:19:42.216970 (ThreadPoolExecutor-0_1): Using postgres connection "list_postgres_dbt_dbt".
+2021-03-28 02:19:42.217236 (ThreadPoolExecutor-0_0): On list_postgres_dbt: BEGIN
+2021-03-28 02:19:42.217390 (ThreadPoolExecutor-0_1): On list_postgres_dbt_dbt: BEGIN
+2021-03-28 02:19:42.217555 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-03-28 02:19:42.217703 (ThreadPoolExecutor-0_1): Opening a new connection, currently in state init
+2021-03-28 02:19:42.221570 (ThreadPoolExecutor-0_1): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:42.221724 (ThreadPoolExecutor-0_1): Using postgres connection "list_postgres_dbt_dbt".
+2021-03-28 02:19:42.221816 (ThreadPoolExecutor-0_0): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:42.221984 (ThreadPoolExecutor-0_1): On list_postgres_dbt_dbt: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "list_postgres_dbt_dbt"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt_dbt'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt_dbt'
+  
+2021-03-28 02:19:42.222177 (ThreadPoolExecutor-0_0): Using postgres connection "list_postgres_dbt".
+2021-03-28 02:19:42.222419 (ThreadPoolExecutor-0_0): On list_postgres_dbt: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "list_postgres_dbt"} */
+select
+      'postgres' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'dbt'
+    union all
+    select
+      'postgres' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'dbt'
+  
+2021-03-28 02:19:42.224705 (ThreadPoolExecutor-0_0): SQL status: SELECT 11 in 0.00 seconds
+2021-03-28 02:19:42.225111 (ThreadPoolExecutor-0_1): SQL status: SELECT 4 in 0.00 seconds
+2021-03-28 02:19:42.227769 (ThreadPoolExecutor-0_0): On list_postgres_dbt: ROLLBACK
+2021-03-28 02:19:42.228550 (ThreadPoolExecutor-0_1): On list_postgres_dbt_dbt: ROLLBACK
+2021-03-28 02:19:42.228686 (ThreadPoolExecutor-0_0): On list_postgres_dbt: Close
+2021-03-28 02:19:42.228951 (ThreadPoolExecutor-0_1): On list_postgres_dbt_dbt: Close
+2021-03-28 02:19:42.233947 (MainThread): Using postgres connection "master".
+2021-03-28 02:19:42.234055 (MainThread): On master: BEGIN
+2021-03-28 02:19:42.234116 (MainThread): Opening a new connection, currently in state init
+2021-03-28 02:19:42.237722 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:42.237903 (MainThread): Using postgres connection "master".
+2021-03-28 02:19:42.238043 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-03-28 02:19:42.269502 (MainThread): SQL status: SELECT 4 in 0.03 seconds
+2021-03-28 02:19:42.270063 (MainThread): On master: ROLLBACK
+2021-03-28 02:19:42.270434 (MainThread): On master: Close
+2021-03-28 02:19:42.270772 (MainThread): 05:19:42 | Concurrency: 2 threads (target='dev')
+2021-03-28 02:19:42.270939 (MainThread): 05:19:42 | 
+2021-03-28 02:19:42.272777 (Thread-1): Began running node model.oyster_cards.oyster_data
+2021-03-28 02:19:42.272906 (Thread-2): Began running node test.oyster_cards.source_accepted_values_raw_Nov09JnyExport_subsystem__LUL_NR__LUL_DLR__NR_DLR__LUL_TRAM__LTB__LUL_NR_LRC__LUL__LUL_NR_DLR__NR_LRC__HEX__LRC__DLR__NR__TRAM__LUL_LRC
+2021-03-28 02:19:42.273370 (Thread-1): Acquiring new postgres connection "model.oyster_cards.oyster_data".
+2021-03-28 02:19:42.273635 (Thread-2): Acquiring new postgres connection "test.oyster_cards.source_accepted_values_raw_Nov09JnyExport_subsystem__LUL_NR__LUL_DLR__NR_DLR__LUL_TRAM__LTB__LUL_NR_LRC__LUL__LUL_NR_DLR__NR_LRC__HEX__LRC__DLR__NR__TRAM__LUL_LRC".
+2021-03-28 02:19:42.273794 (Thread-1): Compiling model.oyster_cards.oyster_data
+2021-03-28 02:19:42.273936 (Thread-2): Compiling test.oyster_cards.source_accepted_values_raw_Nov09JnyExport_subsystem__LUL_NR__LUL_DLR__NR_DLR__LUL_TRAM__LTB__LUL_NR_LRC__LUL__LUL_NR_DLR__NR_LRC__HEX__LRC__DLR__NR__TRAM__LUL_LRC
+2021-03-28 02:19:42.276416 (Thread-1): Writing injected SQL for node "model.oyster_cards.oyster_data"
+2021-03-28 02:19:42.290983 (Thread-2): Writing injected SQL for node "test.oyster_cards.source_accepted_values_raw_Nov09JnyExport_subsystem__LUL_NR__LUL_DLR__NR_DLR__LUL_TRAM__LTB__LUL_NR_LRC__LUL__LUL_NR_DLR__NR_LRC__HEX__LRC__DLR__NR__TRAM__LUL_LRC"
+2021-03-28 02:19:42.291275 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.291504 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.291863 (Thread-1): Finished running node model.oyster_cards.oyster_data
+2021-03-28 02:19:42.292001 (Thread-1): Began running node test.oyster_cards.source_not_null_raw_Nov09JnyExport_subsystem
+2021-03-28 02:19:42.292654 (Thread-1): Acquiring new postgres connection "test.oyster_cards.source_not_null_raw_Nov09JnyExport_subsystem".
+2021-03-28 02:19:42.292910 (Thread-1): Compiling test.oyster_cards.source_not_null_raw_Nov09JnyExport_subsystem
+2021-03-28 02:19:42.298175 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.299940 (Thread-1): Writing injected SQL for node "test.oyster_cards.source_not_null_raw_Nov09JnyExport_subsystem"
+2021-03-28 02:19:42.300124 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.300491 (Thread-2): Finished running node test.oyster_cards.source_accepted_values_raw_Nov09JnyExport_subsystem__LUL_NR__LUL_DLR__NR_DLR__LUL_TRAM__LTB__LUL_NR_LRC__LUL__LUL_NR_DLR__NR_LRC__HEX__LRC__DLR__NR__TRAM__LUL_LRC
+2021-03-28 02:19:42.300608 (Thread-2): Began running node model.oyster_cards.londond_undeground_data
+2021-03-28 02:19:42.300808 (Thread-2): Acquiring new postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:19:42.300893 (Thread-2): Compiling model.oyster_cards.londond_undeground_data
+2021-03-28 02:19:42.303273 (Thread-2): Writing injected SQL for node "model.oyster_cards.londond_undeground_data"
+2021-03-28 02:19:42.303421 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.303542 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.303773 (Thread-1): Finished running node test.oyster_cards.source_not_null_raw_Nov09JnyExport_subsystem
+2021-03-28 02:19:42.303883 (Thread-1): Began running node model.oyster_cards.dim_pass_on_subsystem
+2021-03-28 02:19:42.304270 (Thread-1): Acquiring new postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:19:42.304481 (Thread-1): Compiling model.oyster_cards.dim_pass_on_subsystem
+2021-03-28 02:19:42.307236 (Thread-1): Writing injected SQL for node "model.oyster_cards.dim_pass_on_subsystem"
+2021-03-28 02:19:42.307540 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.307691 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.307942 (Thread-2): Finished running node model.oyster_cards.londond_undeground_data
+2021-03-28 02:19:42.308047 (Thread-2): Began running node model.oyster_cards.stg_croydon_tram_data
+2021-03-28 02:19:42.308246 (Thread-2): Acquiring new postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:19:42.308329 (Thread-2): Compiling model.oyster_cards.stg_croydon_tram_data
+2021-03-28 02:19:42.310048 (Thread-2): Writing injected SQL for node "model.oyster_cards.stg_croydon_tram_data"
+2021-03-28 02:19:42.310505 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.310661 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.310791 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.310964 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.311236 (Thread-1): Finished running node model.oyster_cards.dim_pass_on_subsystem
+2021-03-28 02:19:42.311475 (Thread-2): Finished running node model.oyster_cards.stg_croydon_tram_data
+2021-03-28 02:19:42.311652 (Thread-1): Began running node model.oyster_cards.stg_london_bus_data
+2021-03-28 02:19:42.311772 (Thread-2): Began running node test.oyster_cards.not_null_oyster_data_subsystem
+2021-03-28 02:19:42.312204 (Thread-1): Acquiring new postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:19:42.312402 (Thread-2): Acquiring new postgres connection "test.oyster_cards.not_null_oyster_data_subsystem".
+2021-03-28 02:19:42.312493 (Thread-1): Compiling model.oyster_cards.stg_london_bus_data
+2021-03-28 02:19:42.312672 (Thread-2): Compiling test.oyster_cards.not_null_oyster_data_subsystem
+2021-03-28 02:19:42.314213 (Thread-1): Writing injected SQL for node "model.oyster_cards.stg_london_bus_data"
+2021-03-28 02:19:42.316796 (Thread-2): Writing injected SQL for node "test.oyster_cards.not_null_oyster_data_subsystem"
+2021-03-28 02:19:42.317049 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.317238 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.317469 (Thread-1): Finished running node model.oyster_cards.stg_london_bus_data
+2021-03-28 02:19:42.317595 (Thread-1): Began running node model.oyster_cards.dim_avg_travel_time
+2021-03-28 02:19:42.317790 (Thread-1): Acquiring new postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:19:42.317871 (Thread-1): Compiling model.oyster_cards.dim_avg_travel_time
+2021-03-28 02:19:42.319457 (Thread-1): Writing injected SQL for node "model.oyster_cards.dim_avg_travel_time"
+2021-03-28 02:19:42.319751 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.320076 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.320190 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.320348 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.320583 (Thread-2): Finished running node test.oyster_cards.not_null_oyster_data_subsystem
+2021-03-28 02:19:42.320816 (Thread-1): Finished running node model.oyster_cards.dim_avg_travel_time
+2021-03-28 02:19:42.321004 (Thread-2): Began running node model.oyster_cards.dim_entrance_per_day
+2021-03-28 02:19:42.321290 (Thread-1): Began running node model.oyster_cards.dim_exit_per_day
+2021-03-28 02:19:42.321571 (Thread-2): Acquiring new postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:19:42.321878 (Thread-1): Acquiring new postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:19:42.322018 (Thread-2): Compiling model.oyster_cards.dim_entrance_per_day
+2021-03-28 02:19:42.322153 (Thread-1): Compiling model.oyster_cards.dim_exit_per_day
+2021-03-28 02:19:42.323776 (Thread-2): Writing injected SQL for node "model.oyster_cards.dim_entrance_per_day"
+2021-03-28 02:19:42.325455 (Thread-1): Writing injected SQL for node "model.oyster_cards.dim_exit_per_day"
+2021-03-28 02:19:42.325739 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.325833 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.325959 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.326120 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.326352 (Thread-2): Finished running node model.oyster_cards.dim_entrance_per_day
+2021-03-28 02:19:42.326582 (Thread-1): Finished running node model.oyster_cards.dim_exit_per_day
+2021-03-28 02:19:42.326799 (Thread-2): Began running node test.oyster_cards.not_null_londond_undeground_data_DOW
+2021-03-28 02:19:42.326948 (Thread-1): Began running node test.oyster_cards.not_null_stg_croydon_tram_data_DOW
+2021-03-28 02:19:42.327322 (Thread-2): Acquiring new postgres connection "test.oyster_cards.not_null_londond_undeground_data_DOW".
+2021-03-28 02:19:42.327578 (Thread-1): Acquiring new postgres connection "test.oyster_cards.not_null_stg_croydon_tram_data_DOW".
+2021-03-28 02:19:42.327719 (Thread-2): Compiling test.oyster_cards.not_null_londond_undeground_data_DOW
+2021-03-28 02:19:42.327860 (Thread-1): Compiling test.oyster_cards.not_null_stg_croydon_tram_data_DOW
+2021-03-28 02:19:42.330293 (Thread-2): Writing injected SQL for node "test.oyster_cards.not_null_londond_undeground_data_DOW"
+2021-03-28 02:19:42.332726 (Thread-1): Writing injected SQL for node "test.oyster_cards.not_null_stg_croydon_tram_data_DOW"
+2021-03-28 02:19:42.333010 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.333156 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.333380 (Thread-1): Finished running node test.oyster_cards.not_null_stg_croydon_tram_data_DOW
+2021-03-28 02:19:42.333477 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.333581 (Thread-1): Began running node test.oyster_cards.not_null_stg_london_bus_data_DOW
+2021-03-28 02:19:42.333725 (Thread-2): finished collecting timing info
+2021-03-28 02:19:42.334131 (Thread-1): Acquiring new postgres connection "test.oyster_cards.not_null_stg_london_bus_data_DOW".
+2021-03-28 02:19:42.334402 (Thread-2): Finished running node test.oyster_cards.not_null_londond_undeground_data_DOW
+2021-03-28 02:19:42.334674 (Thread-1): Compiling test.oyster_cards.not_null_stg_london_bus_data_DOW
+2021-03-28 02:19:42.337178 (Thread-1): Writing injected SQL for node "test.oyster_cards.not_null_stg_london_bus_data_DOW"
+2021-03-28 02:19:42.337336 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.337434 (Thread-1): finished collecting timing info
+2021-03-28 02:19:42.337688 (Thread-1): Finished running node test.oyster_cards.not_null_stg_london_bus_data_DOW
+2021-03-28 02:19:42.338560 (MainThread): Connection 'master' was properly closed.
+2021-03-28 02:19:42.338681 (MainThread): Connection 'test.oyster_cards.not_null_stg_london_bus_data_DOW' was properly closed.
+2021-03-28 02:19:42.338761 (MainThread): Connection 'test.oyster_cards.not_null_londond_undeground_data_DOW' was properly closed.
+2021-03-28 02:19:42.342181 (MainThread): 05:19:42 | Done.
+2021-03-28 02:19:42.343625 (MainThread): Acquiring new postgres connection "generate_catalog".
+2021-03-28 02:19:42.343708 (MainThread): 05:19:42 | Building catalog
+2021-03-28 02:19:42.346221 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "postgres.information_schema".
+2021-03-28 02:19:42.351979 (ThreadPoolExecutor-1_0): Using postgres connection "postgres.information_schema".
+2021-03-28 02:19:42.352062 (ThreadPoolExecutor-1_0): On postgres.information_schema: BEGIN
+2021-03-28 02:19:42.352126 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2021-03-28 02:19:42.355558 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.00 seconds
+2021-03-28 02:19:42.355705 (ThreadPoolExecutor-1_0): Using postgres connection "postgres.information_schema".
+2021-03-28 02:19:42.355782 (ThreadPoolExecutor-1_0): On postgres.information_schema: /* {"app": "dbt", "dbt_version": "0.19.0", "profile_name": "oyster_data", "target_name": "dev", "connection_name": "postgres.information_schema"} */
+
+    
+    
+
+    select
+        'postgres' as table_database,
+        sch.nspname as table_schema,
+        tbl.relname as table_name,
+        case tbl.relkind
+            when 'v' then 'VIEW'
+            else 'BASE TABLE'
+        end as table_type,
+        tbl_desc.description as table_comment,
+        col.attname as column_name,
+        col.attnum as column_index,
+        pg_catalog.format_type(col.atttypid, col.atttypmod) as column_type,
+        col_desc.description as column_comment,
+        pg_get_userbyid(tbl.relowner) as table_owner
+
+    from pg_catalog.pg_namespace sch
+    join pg_catalog.pg_class tbl on tbl.relnamespace = sch.oid
+    join pg_catalog.pg_attribute col on col.attrelid = tbl.oid
+    left outer join pg_catalog.pg_description tbl_desc on (tbl_desc.objoid = tbl.oid and tbl_desc.objsubid = 0)
+    left outer join pg_catalog.pg_description col_desc on (col_desc.objoid = tbl.oid and col_desc.objsubid = col.attnum)
+
+    where (upper(sch.nspname) = upper('dbt_dbt') or upper(sch.nspname) = upper('dbt') or upper(sch.nspname) = upper('raw'))
+      and not pg_is_other_temp_schema(sch.oid) -- not a temporary schema belonging to another session
+      and tbl.relpersistence = 'p' -- [p]ermanent table. Other values are [u]nlogged table, [t]emporary table
+      and tbl.relkind in ('r', 'v', 'f', 'p') -- o[r]dinary table, [v]iew, [f]oreign table, [p]artitioned table. Other values are [i]ndex, [S]equence, [c]omposite type, [t]OAST table, [m]aterialized view
+      and col.attnum > 0 -- negative numbers are used for system columns such as oid
+      and not col.attisdropped -- column as not been dropped
+
+    order by
+        sch.nspname,
+        tbl.relname,
+        col.attnum
+2021-03-28 02:19:42.361137 (ThreadPoolExecutor-1_0): SQL status: SELECT 202 in 0.01 seconds
+2021-03-28 02:19:42.376737 (ThreadPoolExecutor-1_0): On postgres.information_schema: ROLLBACK
+2021-03-28 02:19:42.377162 (ThreadPoolExecutor-1_0): On postgres.information_schema: Close
+2021-03-28 02:19:42.418206 (MainThread): 05:19:42 | Catalog written to /home/user/Documents/otus/oyster_cards/target/catalog.json
+2021-03-28 02:19:42.418461 (MainThread): Flushing usage events
+2021-03-28 02:19:42.418592 (MainThread): Connection 'generate_catalog' was properly closed.
+2021-03-28 02:19:42.418698 (MainThread): Connection 'postgres.information_schema' was properly closed.
+2021-03-28 02:19:46.749503 (MainThread): Running with dbt=0.19.0
+2021-03-28 02:19:46.801711 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.serve.ServeTask'>, debug=False, defer=None, log_cache_events=False, log_format='default', open_browser=True, partial_parse=None, port=8080, profile=None, profiles_dir='/home/user/.dbt', project_dir=None, record_timing_info=None, rpc_method=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, vars='{}', warn_error=False, which='serve', write_json=True)
+2021-03-28 02:19:46.802261 (MainThread): Tracking: do not track
+2021-03-28 02:19:46.825191 (MainThread): Serving docs at 0.0.0.0:8080
+2021-03-28 02:19:46.825394 (MainThread): To access from your browser, navigate to:  http://localhost:8080
+2021-03-28 02:19:46.825527 (MainThread): Press Ctrl+C to exit.
+
+
+2021-03-28 02:20:23.940121 (MainThread): Flushing usage events
+2021-03-28 02:20:23.940495 (MainThread): ctrl-c
+2021-03-28 02:21:00.412794 (MainThread): Running with dbt=0.19.0
+2021-03-28 02:21:00.481268 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', models=None, partial_parse=None, profile=None, profiles_dir='/home/user/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-03-28 02:21:00.482195 (MainThread): Tracking: do not track
+2021-03-28 02:21:00.522202 (MainThread): Partial parsing not enabled
+2021-03-28 02:21:00.523049 (MainThread): Parsing macros/catalog.sql
+2021-03-28 02:21:00.527130 (MainThread): Parsing macros/relations.sql
+2021-03-28 02:21:00.529128 (MainThread): Parsing macros/adapters.sql
+2021-03-28 02:21:00.550672 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-03-28 02:21:00.553733 (MainThread): Parsing macros/core.sql
+2021-03-28 02:21:00.558238 (MainThread): Parsing macros/adapters/common.sql
+2021-03-28 02:21:00.605198 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-03-28 02:21:00.607081 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-03-28 02:21:00.609261 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-03-28 02:21:00.611698 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-03-28 02:21:00.613403 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-03-28 02:21:00.614906 (MainThread): Parsing macros/etc/query.sql
+2021-03-28 02:21:00.615820 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-03-28 02:21:00.618291 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-03-28 02:21:00.619710 (MainThread): Parsing macros/etc/datetime.sql
+2021-03-28 02:21:00.630373 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-03-28 02:21:00.632686 (MainThread): Parsing macros/materializations/helpers.sql
+2021-03-28 02:21:00.643218 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-03-28 02:21:00.658059 (MainThread): Parsing macros/materializations/table/table.sql
+2021-03-28 02:21:00.665621 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-03-28 02:21:00.705088 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-03-28 02:21:00.706880 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-03-28 02:21:00.731946 (MainThread): Parsing macros/materializations/view/view.sql
+2021-03-28 02:21:00.742567 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-03-28 02:21:00.748943 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-03-28 02:21:00.772331 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-03-28 02:21:00.774388 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-03-28 02:21:00.786799 (MainThread): Partial parsing not enabled
+2021-03-28 02:21:00.809762 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_pass_on_subsystem".
+2021-03-28 02:21:00.820537 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_avg_travel_time".
+2021-03-28 02:21:00.823919 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_entrance_per_day".
+2021-03-28 02:21:00.827205 (MainThread): Acquiring new postgres connection "model.oyster_cards.dim_exit_per_day".
+2021-03-28 02:21:00.830793 (MainThread): Acquiring new postgres connection "model.oyster_cards.stg_oyster_data".
+2021-03-28 02:21:00.835138 (MainThread): Acquiring new postgres connection "model.oyster_cards.stg_london_bus_data".
+2021-03-28 02:21:00.839107 (MainThread): Acquiring new postgres connection "model.oyster_cards.stg_croydon_tram_data".
+2021-03-28 02:21:00.842744 (MainThread): Acquiring new postgres connection "model.oyster_cards.londond_undeground_data".
+2021-03-28 02:21:00.942378 (MainThread): WARNING: Found documentation for resource "oyster_data" which was not found or is disabled
+2021-03-28 02:21:00.942742 (MainThread): Flushing usage events
+2021-03-28 02:21:00.942884 (MainThread): Connection 'model.oyster_cards.londond_undeground_data' was properly closed.
+2021-03-28 02:21:00.942971 (MainThread): Encountered an error:
+2021-03-28 02:21:00.943071 (MainThread): Compilation Error in model dim_pass_on_subsystem (models/marts/dim_pass_on_subsystem.sql)
+  Model 'model.oyster_cards.dim_pass_on_subsystem' (models/marts/dim_pass_on_subsystem.sql) depends on a node named 'oyster_data' which was not found
+2021-03-28 02:21:00.943849 (MainThread): Traceback (most recent call last):
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/main.py", line 125, in main
+    results, succeeded = handle_and_check(args)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/main.py", line 203, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/main.py", line 256, in run_from_args
+    results = task.run()
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/task/runnable.py", line 406, in run
+    self._runtime_initialize()
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/task/runnable.py", line 122, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/task/runnable.py", line 79, in _runtime_initialize
+    self.load_manifest()
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/task/runnable.py", line 66, in load_manifest
+    self.manifest = get_full_manifest(self.config)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/perf_utils.py", line 28, in get_full_manifest
+    return load_manifest(
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/parser/manifest.py", line 862, in load_manifest
+    return ManifestLoader.load_all(config, macro_manifest, macro_hook)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/parser/manifest.py", line 444, in load_all
+    manifest = loader.create_manifest()
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/parser/manifest.py", line 422, in create_manifest
+    self.process_manifest(manifest)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/parser/manifest.py", line 388, in process_manifest
+    process_refs(manifest, project_name)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/parser/manifest.py", line 758, in process_refs
+    _process_refs_for_node(manifest, current_project, node)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/parser/manifest.py", line 740, in _process_refs_for_node
+    invalid_ref_fail_unless_test(
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/parser/manifest.py", line 483, in invalid_ref_fail_unless_test
+    ref_target_not_found(
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/exceptions.py", line 566, in ref_target_not_found
+    raise_compiler_error(msg, model)
+  File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/exceptions.py", line 435, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model dim_pass_on_subsystem (models/marts/dim_pass_on_subsystem.sql)
+  Model 'model.oyster_cards.dim_pass_on_subsystem' (models/marts/dim_pass_on_subsystem.sql) depends on a node named 'oyster_data' which was not found
+

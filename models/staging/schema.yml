@@ -4,7 +4,27 @@ models:
   - name: oyster_data
     description: "{{ doc('subsystem') }}"
     columns:
-      - name: customer_id
+      - name: subsystem
         tests:
-          - unique
+          - not_null
+
+  - name: londond_undeground_data
+    description: Data of travelling through London Tube (underground)
+    columns:
+      - name: DOW
+        tests:
+          - not_null
+
+  - name: stg_croydon_tram_data
+    description: Data of travelling through tram system
+    columns:
+      - name: DOW
+        tests:
+          - not_null
+
+  - name: stg_london_bus_data
+    description: Data of travelling through bus system
+    columns:
+      - name: DOW
+        tests:
           - not_null

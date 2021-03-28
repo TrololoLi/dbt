@@ -27,7 +27,7 @@ renamed as (
         FFare as FullFare,
         DFare as DiscountFare,
         RouteID as BusRoute,
-        finalproduct
+        finalproduct as PassType
 
     from source
 
