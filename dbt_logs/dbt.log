@@ -5232,11 +5232,11 @@ alter table "postgres"."dbt"."entrance_per_day__dbt_tmp" rename to "entrance_per
 2021-03-27 00:00:00.769374 (Thread-2): On model.oyster_cards.entrance_per_day: COMMIT
 2021-03-27 00:00:00.769501 (Thread-2): Using postgres connection "model.oyster_cards.entrance_per_day".
 2021-03-27 00:00:00.769622 (Thread-2): On model.oyster_cards.entrance_per_day: COMMIT
-2021-03-27 00:00:00.766376 (Thread-1): Database Error in model exit_per_day (models/marts/exit_per_day.sql)
+2021-03-27 00:00:00.766376 (Thread-1): Database Error in model exit_per_day (models/marts/dim_exit_per_day.sql)
   column "londond_undeground_data.startstn" must appear in the GROUP BY clause or be used in an aggregate function
   LINE 4:     select daytype,startstn, count(1)
                              ^
-  compiled SQL at target/run/oyster_cards/models/marts/exit_per_day.sql
+  compiled SQL at target/run/oyster_cards/models/marts/dim_exit_per_day.sql
 Traceback (most recent call last):
   File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 47, in exception_handler
     yield
@@ -5294,11 +5294,11 @@ Traceback (most recent call last):
     self.gen.throw(type, value, traceback)
   File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 58, in exception_handler
     raise dbt.exceptions.DatabaseException(str(e).strip()) from e
-dbt.exceptions.DatabaseException: Database Error in model exit_per_day (models/marts/exit_per_day.sql)
+dbt.exceptions.DatabaseException: Database Error in model exit_per_day (models/marts/dim_exit_per_day.sql)
   column "londond_undeground_data.startstn" must appear in the GROUP BY clause or be used in an aggregate function
   LINE 4:     select daytype,startstn, count(1)
                              ^
-  compiled SQL at target/run/oyster_cards/models/marts/exit_per_day.sql
+  compiled SQL at target/run/oyster_cards/models/marts/dim_exit_per_day.sql
 2021-03-27 00:00:00.770552 (Thread-1): 03:00:00 | 4 of 4 ERROR creating view model dbt.exit_per_day.................... [ERROR in 0.07s]
 2021-03-27 00:00:00.770660 (Thread-1): Finished running node model.oyster_cards.exit_per_day
 2021-03-27 00:00:00.771863 (Thread-2): SQL status: COMMIT in 0.00 seconds
@@ -5328,11 +5328,11 @@ drop view if exists "postgres"."dbt"."entrance_per_day__dbt_backup" cascade
 2021-03-27 00:00:00.787456 (MainThread): 
 2021-03-27 00:00:00.787566 (MainThread): Completed with 1 error and 0 warnings:
 2021-03-27 00:00:00.787648 (MainThread): 
-2021-03-27 00:00:00.787727 (MainThread): Database Error in model exit_per_day (models/marts/exit_per_day.sql)
+2021-03-27 00:00:00.787727 (MainThread): Database Error in model exit_per_day (models/marts/dim_exit_per_day.sql)
 2021-03-27 00:00:00.787802 (MainThread):   column "londond_undeground_data.startstn" must appear in the GROUP BY clause or be used in an aggregate function
 2021-03-27 00:00:00.787864 (MainThread):   LINE 4:     select daytype,startstn, count(1)
 2021-03-27 00:00:00.787922 (MainThread):                              ^
-2021-03-27 00:00:00.787980 (MainThread):   compiled SQL at target/run/oyster_cards/models/marts/exit_per_day.sql
+2021-03-27 00:00:00.787980 (MainThread):   compiled SQL at target/run/oyster_cards/models/marts/dim_exit_per_day.sql
 2021-03-27 00:00:00.788051 (MainThread): 
 Done. PASS=3 WARN=0 ERROR=1 SKIP=0 TOTAL=4
 2021-03-27 00:00:00.788166 (MainThread): Flushing usage events
@@ -7384,11 +7384,11 @@ LINE 4:     select daytype,endstation, count(1)
 2021-03-27 00:29:19.976654 (Thread-2): On model.oyster_cards.exit_per_day: ROLLBACK
 2021-03-27 00:29:19.977537 (Thread-2): finished collecting timing info
 2021-03-27 00:29:19.977763 (Thread-2): On model.oyster_cards.exit_per_day: Close
-2021-03-27 00:29:19.977174 (Thread-1): Database Error in model entrance_per_day (models/marts/entrance_per_day.sql)
+2021-03-27 00:29:19.977174 (Thread-1): Database Error in model entrance_per_day (models/marts/dim_entrance_per_day.sql)
   column "daytype" does not exist
   LINE 4:     select daytype,startstn, count(1)
                      ^
-  compiled SQL at target/run/oyster_cards/models/marts/entrance_per_day.sql
+  compiled SQL at target/run/oyster_cards/models/marts/dim_entrance_per_day.sql
 Traceback (most recent call last):
   File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 47, in exception_handler
     yield
@@ -7446,18 +7446,18 @@ Traceback (most recent call last):
     self.gen.throw(type, value, traceback)
   File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 58, in exception_handler
     raise dbt.exceptions.DatabaseException(str(e).strip()) from e
-dbt.exceptions.DatabaseException: Database Error in model entrance_per_day (models/marts/entrance_per_day.sql)
+dbt.exceptions.DatabaseException: Database Error in model entrance_per_day (models/marts/dim_entrance_per_day.sql)
   column "daytype" does not exist
   LINE 4:     select daytype,startstn, count(1)
                      ^
-  compiled SQL at target/run/oyster_cards/models/marts/entrance_per_day.sql
+  compiled SQL at target/run/oyster_cards/models/marts/dim_entrance_per_day.sql
 2021-03-27 00:29:19.982603 (Thread-1): 03:29:19 | 3 of 4 ERROR creating view model dbt.entrance_per_day................ [ERROR in 0.15s]
 2021-03-27 00:29:19.982841 (Thread-1): Finished running node model.oyster_cards.entrance_per_day
-2021-03-27 00:29:19.978270 (Thread-2): Database Error in model exit_per_day (models/marts/exit_per_day.sql)
+2021-03-27 00:29:19.978270 (Thread-2): Database Error in model exit_per_day (models/marts/dim_exit_per_day.sql)
   column "daytype" does not exist
   LINE 4:     select daytype,endstation, count(1)
                      ^
-  compiled SQL at target/run/oyster_cards/models/marts/exit_per_day.sql
+  compiled SQL at target/run/oyster_cards/models/marts/dim_exit_per_day.sql
 Traceback (most recent call last):
   File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 47, in exception_handler
     yield
@@ -7515,11 +7515,11 @@ Traceback (most recent call last):
     self.gen.throw(type, value, traceback)
   File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 58, in exception_handler
     raise dbt.exceptions.DatabaseException(str(e).strip()) from e
-dbt.exceptions.DatabaseException: Database Error in model exit_per_day (models/marts/exit_per_day.sql)
+dbt.exceptions.DatabaseException: Database Error in model exit_per_day (models/marts/dim_exit_per_day.sql)
   column "daytype" does not exist
   LINE 4:     select daytype,endstation, count(1)
                      ^
-  compiled SQL at target/run/oyster_cards/models/marts/exit_per_day.sql
+  compiled SQL at target/run/oyster_cards/models/marts/dim_exit_per_day.sql
 2021-03-27 00:29:19.983601 (Thread-2): 03:29:19 | 4 of 4 ERROR creating view model dbt.exit_per_day.................... [ERROR in 0.14s]
 2021-03-27 00:29:19.983763 (Thread-2): Finished running node model.oyster_cards.exit_per_day
 2021-03-27 00:29:19.985023 (MainThread): Acquiring new postgres connection "master".
@@ -7540,17 +7540,17 @@ dbt.exceptions.DatabaseException: Database Error in model exit_per_day (models/m
 2021-03-27 00:29:19.996118 (MainThread): 
 2021-03-27 00:29:19.996308 (MainThread): Completed with 2 errors and 0 warnings:
 2021-03-27 00:29:19.996442 (MainThread): 
-2021-03-27 00:29:19.996569 (MainThread): Database Error in model entrance_per_day (models/marts/entrance_per_day.sql)
+2021-03-27 00:29:19.996569 (MainThread): Database Error in model entrance_per_day (models/marts/dim_entrance_per_day.sql)
 2021-03-27 00:29:19.996682 (MainThread):   column "daytype" does not exist
 2021-03-27 00:29:19.996782 (MainThread):   LINE 4:     select daytype,startstn, count(1)
 2021-03-27 00:29:19.996878 (MainThread):                      ^
-2021-03-27 00:29:19.996973 (MainThread):   compiled SQL at target/run/oyster_cards/models/marts/entrance_per_day.sql
+2021-03-27 00:29:19.996973 (MainThread):   compiled SQL at target/run/oyster_cards/models/marts/dim_entrance_per_day.sql
 2021-03-27 00:29:19.997102 (MainThread): 
-2021-03-27 00:29:19.997219 (MainThread): Database Error in model exit_per_day (models/marts/exit_per_day.sql)
+2021-03-27 00:29:19.997219 (MainThread): Database Error in model exit_per_day (models/marts/dim_exit_per_day.sql)
 2021-03-27 00:29:19.997323 (MainThread):   column "daytype" does not exist
 2021-03-27 00:29:19.997419 (MainThread):   LINE 4:     select daytype,endstation, count(1)
 2021-03-27 00:29:19.997512 (MainThread):                      ^
-2021-03-27 00:29:19.997605 (MainThread):   compiled SQL at target/run/oyster_cards/models/marts/exit_per_day.sql
+2021-03-27 00:29:19.997605 (MainThread):   compiled SQL at target/run/oyster_cards/models/marts/dim_exit_per_day.sql
 2021-03-27 00:29:19.997716 (MainThread): 
 Done. PASS=2 WARN=0 ERROR=2 SKIP=0 TOTAL=4
 2021-03-27 00:29:19.997890 (MainThread): Flushing usage events
@@ -7907,11 +7907,11 @@ LINE 6: group by daytype,startstn
 2021-03-27 00:30:18.046220 (Thread-1): finished collecting timing info
 2021-03-27 00:30:18.046393 (Thread-2): On model.oyster_cards.exit_per_day: Close
 2021-03-27 00:30:18.046526 (Thread-1): On model.oyster_cards.entrance_per_day: Close
-2021-03-27 00:30:18.047386 (Thread-1): Database Error in model entrance_per_day (models/marts/entrance_per_day.sql)
+2021-03-27 00:30:18.047386 (Thread-1): Database Error in model entrance_per_day (models/marts/dim_entrance_per_day.sql)
   column "daytype" does not exist
   LINE 6: group by daytype,startstn
                    ^
-  compiled SQL at target/run/oyster_cards/models/marts/entrance_per_day.sql
+  compiled SQL at target/run/oyster_cards/models/marts/dim_entrance_per_day.sql
 Traceback (most recent call last):
   File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 47, in exception_handler
     yield
@@ -7969,16 +7969,16 @@ Traceback (most recent call last):
     self.gen.throw(type, value, traceback)
   File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 58, in exception_handler
     raise dbt.exceptions.DatabaseException(str(e).strip()) from e
-dbt.exceptions.DatabaseException: Database Error in model entrance_per_day (models/marts/entrance_per_day.sql)
+dbt.exceptions.DatabaseException: Database Error in model entrance_per_day (models/marts/dim_entrance_per_day.sql)
   column "daytype" does not exist
   LINE 6: group by daytype,startstn
                    ^
-  compiled SQL at target/run/oyster_cards/models/marts/entrance_per_day.sql
-2021-03-27 00:30:18.046881 (Thread-2): Database Error in model exit_per_day (models/marts/exit_per_day.sql)
+  compiled SQL at target/run/oyster_cards/models/marts/dim_entrance_per_day.sql
+2021-03-27 00:30:18.046881 (Thread-2): Database Error in model exit_per_day (models/marts/dim_exit_per_day.sql)
   column "daytype" does not exist
   LINE 6: group by daytype, endstation
                    ^
-  compiled SQL at target/run/oyster_cards/models/marts/exit_per_day.sql
+  compiled SQL at target/run/oyster_cards/models/marts/dim_exit_per_day.sql
 Traceback (most recent call last):
   File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 47, in exception_handler
     yield
@@ -8036,11 +8036,11 @@ Traceback (most recent call last):
     self.gen.throw(type, value, traceback)
   File "/home/user/Documents/otus/dbt-env/lib/python3.8/site-packages/dbt/adapters/postgres/connections.py", line 58, in exception_handler
     raise dbt.exceptions.DatabaseException(str(e).strip()) from e
-dbt.exceptions.DatabaseException: Database Error in model exit_per_day (models/marts/exit_per_day.sql)
+dbt.exceptions.DatabaseException: Database Error in model exit_per_day (models/marts/dim_exit_per_day.sql)
   column "daytype" does not exist
   LINE 6: group by daytype, endstation
                    ^
-  compiled SQL at target/run/oyster_cards/models/marts/exit_per_day.sql
+  compiled SQL at target/run/oyster_cards/models/marts/dim_exit_per_day.sql
 2021-03-27 00:30:18.050851 (Thread-1): 03:30:18 | 3 of 4 ERROR creating view model dbt.entrance_per_day................ [ERROR in 0.06s]
 2021-03-27 00:30:18.051139 (Thread-2): 03:30:18 | 4 of 4 ERROR creating view model dbt.exit_per_day.................... [ERROR in 0.06s]
 2021-03-27 00:30:18.051305 (Thread-1): Finished running node model.oyster_cards.entrance_per_day
@@ -8063,17 +8063,17 @@ dbt.exceptions.DatabaseException: Database Error in model exit_per_day (models/m
 2021-03-27 00:30:18.061665 (MainThread): 
 2021-03-27 00:30:18.061825 (MainThread): Completed with 2 errors and 0 warnings:
 2021-03-27 00:30:18.061960 (MainThread): 
-2021-03-27 00:30:18.062102 (MainThread): Database Error in model entrance_per_day (models/marts/entrance_per_day.sql)
+2021-03-27 00:30:18.062102 (MainThread): Database Error in model entrance_per_day (models/marts/dim_entrance_per_day.sql)
 2021-03-27 00:30:18.062214 (MainThread):   column "daytype" does not exist
 2021-03-27 00:30:18.062326 (MainThread):   LINE 6: group by daytype,startstn
 2021-03-27 00:30:18.062439 (MainThread):                    ^
-2021-03-27 00:30:18.062548 (MainThread):   compiled SQL at target/run/oyster_cards/models/marts/entrance_per_day.sql
+2021-03-27 00:30:18.062548 (MainThread):   compiled SQL at target/run/oyster_cards/models/marts/dim_entrance_per_day.sql
 2021-03-27 00:30:18.062675 (MainThread): 
-2021-03-27 00:30:18.062797 (MainThread): Database Error in model exit_per_day (models/marts/exit_per_day.sql)
+2021-03-27 00:30:18.062797 (MainThread): Database Error in model exit_per_day (models/marts/dim_exit_per_day.sql)
 2021-03-27 00:30:18.062897 (MainThread):   column "daytype" does not exist
 2021-03-27 00:30:18.063007 (MainThread):   LINE 6: group by daytype, endstation
 2021-03-27 00:30:18.063113 (MainThread):                    ^
-2021-03-27 00:30:18.063208 (MainThread):   compiled SQL at target/run/oyster_cards/models/marts/exit_per_day.sql
+2021-03-27 00:30:18.063208 (MainThread):   compiled SQL at target/run/oyster_cards/models/marts/dim_exit_per_day.sql
 2021-03-27 00:30:18.063343 (MainThread): 
 Done. PASS=2 WARN=0 ERROR=2 SKIP=0 TOTAL=4
 2021-03-27 00:30:18.063522 (MainThread): Flushing usage events
