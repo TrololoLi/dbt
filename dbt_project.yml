@@ -1,0 +1,29 @@
+name: 'oyster_cards'
+
+config-version: 2
+version: '0.1'
+
+profile: 'oyster_data'
+
+source-paths: ["models"]
+analysis-paths: ["analysis"]
+test-paths: ["tests"]
+data-paths: ["data"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshot"]
+
+target-path: "target"
+clean-targets:
+    - "target"
+    - "dbt_modules"
+log-path: dbt_logs
+
+models:
+  oyster_cards:
+#      materialized: table
+      staging:
+        materialized: table
+        tags: ["staging", "hourly"]
+
+
+

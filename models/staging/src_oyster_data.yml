@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: raw
+    database: postgres
+    tables:
+      - name: "Nov09JnyExport"
+        description: Raw data from oyster cards for 1 week in November 2009.
+        columns:
+          - name: subsystem
+            description: Type of transport system
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - LUL/NR
+                    - LUL/DLR
+                    - NR/DLR
+                    - LUL/TRAM
+                    - LTB
+                    - LUL/NR/LRC
+                    - LUL
+                    - LUL/NR/DLR
+                    - NR/LRC
+                    - HEX
+                    - LRC
+                    - DLR
+                    - NR
+                    - TRAM
+                    - LUL/LRC
