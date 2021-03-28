@@ -1,4 +1,4 @@
-## The study project made with Data Build Tool
+## Study project made with Data Build Tool
 
 The purpose of the project is to get familiar with dbt tool and build stage and marts layers
 
